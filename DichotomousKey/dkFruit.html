@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>생물분류기사(식물)300종</title>
+    <!-- 외부 CSS 파일 연결 -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+    <style>
+        /* 기본적으로 종명을 숨김 */
+        .species-name {
+            display: none;
+           /* color: red; /* 종명 텍스트를 붉은색으로 */
+		   font-size:16px;
+			style:strong;
+        }
+    </style>
+    <!-- 외부 JS 파일 연결 -->
+    <script src="../script.js" defer></script>
+    <script>
+        function toggleSpeciesName() {
+            // 체크박스 상태를 가져옴
+            var checkBox = document.getElementById("toggleAnswer");
+            // 종명을 나타내는 모든 요소를 가져옴
+            var speciesNames = document.querySelectorAll(".species-name");
+
+            // 체크박스가 체크되었으면 종명을 보여주고, 아니면 숨김
+            speciesNames.forEach(function(name) {
+                if (checkBox.checked) {
+                    name.style.display = "inline";
+                } else {
+                    name.style.display = "none";
+                }
+            });
+        }
+    </script>
+ </head>
+ <body>
+ <div class="header-container">
+  
+	  <h1 class="title"><생물분류기사(식물) 실기시험 출제예상 300종-열매종류검색표></h1>
+
+		  <div class="size-control">
+			<label for="imageSizeSlider">이미지 조절: </label>
+				  <input type="range" id="imageSizeSlider" min="100" max="800" value="150" step="10" oninput="resizeAllImages(this.value)">
+				  <span id="sizeDisplay">150</span>px
+		</div>
+
+		<div class="scroll-control">
+			<label for="speedSlider">속도 조절: </label>
+			<input type="range" id="speedSlider" min="1" max="100" value="1" step="1" oninput="updateSpeed(this.value)">
+			<span id="speedValue">1</span>픽셀/초
+			<button id="pauseButton" onclick="toggleScroll()">진행시켜</button>
+			<button onclick="restartScroll()">처음부터</button>
+		</div>
+
+</div>
+<p class="copyright">
+ 	**사용된 이미지 파일은 <a href="https://species.nibr.go.kr/" target="nibr">국립생물자원관(https://species.nibr.go.kr/)</a>에 있는 링크 이미지입니다. **<br>
+종명을 클릭하면 자원관의 해당 종 상세정보 페이지로 이동합니다.
+이미지를 클릭하면 자원관의 고해상도 사진으로 이동합니다. <br>
+자원관 사진이 시원치 않거나 동정포인트가 잘 안보이는 경우 "<a href="https://blog.naver.com/haegangchun" target="_blog">한국의 야생화 Wildflower Korea</a> "블로그 주소를 링크하였습니다.<br>
+오류및 개선사항 flowercrazer@gmail.com  웹호스팅 만료예정일 : 2025-03-19
+</p>
+<!-- 메뉴 버튼 -->
+<div class="menu-button" onclick="toggleMenu()">▶<br>▶<br>▶</div>
+
+<!-- 펼쳐질 메뉴 -->
+<div class="menu" id="sideMenu">
+<p class="indent-1"><a href="/">출제300종모두</a></P>    
+<p class="level1">Phylum/CLASS</p>
+     <ul>
+        <li><a href="../Pteridophyta.html">양치식물문(21)</a></li>
+		<li><a href="../Pinopsida.html">나자식물문(10)</a></li>
+        <li><a href="../Magnoliopsida.html">목련강(215)</a></li>
+        <li><a href="../Liliopsida.html">백합강(54)</a></li>
+    </ul>
+	<p class="level1">오마카세</p>
+	 <ul>
+        <li><a href="../redList.html">멸종위기종</a></li>
+        <li><a href="../panicleList.html">다글다글</a></li>
+        <li><a href="../tailList.html">꼬리꼬리</a></li>
+        <li><a href="../aquaList.html">풍덩풍덩</a></li>
+    </ul>
+		<p class="level1">검색표</p>
+	 <ul>
+		 <li><a href="dkPolypodiales.html">고사리목</a></li>
+        <li><a href="dkFagaceae.html">참나무과</a></li>
+		<li><a href="dkLespedeza.html">싸리속</a></li>
+		<li><a href="dkFruit.html">열매종류 검색표</a></li>
+		
+     </ul>
+	<p class="level1">아쉬운것</p>
+	 <ul>
+        <li><a href="../myList.html">과일조아</a></li>
+		<li><a href="../FequalS.html">과=종</a></li>
+     </ul>
+	
+</div>
+<table height="61" border="0">																								
+	<tr>
+		<td> </td>
+	</tr>
+	</table>
+
+
+
+	<table>
+<tr><td>
+
+	    <!-- 정답 보기(붉은색은 300종) 체크박스 추가 -->
+    <label>
+        <input type="checkbox" id="toggleAnswer" onclick="toggleSpeciesName()"> 정답 보기(붉은색은 300종)
+    </label>
+</td>
+	</tr>
+<tr><td>
+
+
+<h1>열매 종류의 검색표</h1>
+
+
+
+<p class="indent-1">1. 열매는 1개의 꽃이 성숙하여 됨 -->2</p>
+<p class="indent-1">1. 열매는 여러 개의 꽃이 모여서 하나를 이룸.   ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">다화과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>-->3</p>
+
+<p class="indent-2">2. 1개의 열매(심피 1개 또는 여러 개 그리고 융합됨)  ==<span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">단과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>-->3</p>
+<p class="indent-2">2. 여러 개의 구별되는 열매(심피 여러 개, 각각 구별됨) ==<span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">취과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>-->3</p>
+
+<p class="indent-3">3. 열매는 익어도 열개되지 않는다<span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">폐과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>-->4</p>
+<p class="indent-3">3. 열매는 익으면 열개되거나 찢어진다<span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">개과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>  --> 13</p>
+
+<p class="indent-4">4. 열매는 다육질성(적어도 부분적으로) -->5</p>
+<p class="indent-4">4. 열매는 건조<span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">건과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> -->8</p>
+
+<p class="indent-5">5. 열매의 조직은 어느 정도 동질성(종자부위 제외), 전반적으로 다육질성 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">장과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-5">5. 열매를 구성하는 조직 이질성 --> 6</p>
+
+<p class="indent-6">6. 열매의 외과피는 견고하고, 딱딱하며 또는 혁질이다; 내과피는 부드러운 육질로 구성됨 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">장과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-6">6. 열매의 외과피는 부드럽다; 내과피는 지질, 연골질, 또는 단단하다 --> 7</p>
+
+<p class="indent-7">7. 열매의 중앙부위에 1개 또는 그 이상의 종자가 단단한 부막조직의 구조로 싸여짐; 자방하위 또는 자방상위 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">핵과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-7">7. 열매의 중앙부위는 지질 또는 연골질의 구조가 종자를 감싸고 있음; 자방하위 ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">이과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+
+<p class="indent-5">8. 열매는 보통 여러개 또는 다수의 종자를 가짐 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">폐협과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-5">8. 열매는 보통 1개의 종자를 가짐 --> 9</p>
+
+<p class="indent-6">9. 열매에 날개가 있음 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">시과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> 
+<p class="indent-6">9. 열매에 날개가 없음 --> 10</p>
+
+<p class="indent-7">10. 과피는 두텁고 딱딱한 후막조직으로 된 목질이다; 크기 대체로 크다 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">견과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> 
+<p class="indent-7">10. 과피는 얇고, 막질이다; 크기는 다소 작다 -->11</p>
+
+<p class="indent-8">11. 과피는 종자(종피)와 느슨하게 융합되어 있꺼나 분리되어 있다. ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">낭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-8">11. 과피는 종자(종피)와 견고하게 밀착하여 융합되어 있다. --> 12</p>
+
+<p class="indent-9">12. 과피는 종자에 견고하게 밀착되어 있지만, 종자로부터는 분리됨 ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">수과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-9">12. 과피는 종자와 이합되어 밀착되어 있음.==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">영과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+
+<p class="indent-4">13. 열매는 1개의 심피로부터 구성된다. --> 14</p>
+<p class="indent-4">13. 열매는 2개-여러 개의 자성기로부터 구성된다. --> 16</p>
+
+<p class="indent-5">14. 열매는 1개의 봉선을 따라 열린다. ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">골돌과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-5">14. 열매는 2개의 봉선을 따라 열리거나, 횡선에 따라 열린다. -->15</p>
+
+<p class="indent-6">15. 2개의 봉선이 종적으로 열린다. ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">협과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-6">15. 봉선은 횡적으로 1개의 종자를 가진, 여러 조각으로 나누어진다. ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">분리과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+
+<p class="indent-5">16. 열매는 초기부터 점차로 찢어지는 건조/섬유질부터 혁질 또는 다육질의 외과피를 가지며, 중앙부위는 종자를 단단한 후막조직이 감싼다 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">열개핵과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> 
+<p class="indent-5">16. 열매는 종자를 둘러싼 단단한 후막조직이 없으며, 찢어져 열리거나 1개의 종자를 지닌 조각으로 분리된다. --17</p>
+
+<p class="indent-6">17. 열매는 1개/몇 개의 종자를 가진 조각을 나뉜다(분과) ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">분열과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+
+<p class="indent-1">18. 열매는 종자가 붙었던 가장자리 주변의 남아있는 부분으로부터 2개의 자방실과 2개의 막으로 나뉘어진다. ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">장각과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> 
+<p class="indent-1">18. 열매는 1개부터 여러 개의 자방실로 나누어지며, 만일 2개의 자방실의 경우 얇은 격막은 영속적으로 남지 못한다. ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">삭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> --> 19
+
+<p class="indent-2">19. 열매는 포주열개 방식인 횡적으로 열리고, 끈 부분은 뚜껑처럼 열리게 된다. ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">횡열개 삭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-2">19. 열매는 포주열개의 방식으로 열리지 않는다. --> 20</p>
+
+<p class="indent-3">20. 열매는 구멍, 덮게 모양, 치아모양으로 벌어진다. --> 21</p>
+<p class="indent-3">20. 열매는 종적으로 또는 불규칙적으로 벌어진다. --> 22</p>
+
+<p class="indent-4">21. 열매는 정단의 연속적인 치간모양으로 열린다. ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">치상개열 삭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-4">21. 열매는 끝이나 밑에 구멍이 터져 벌어진다. ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">포공개열 삭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+
+<p class="indent-4">22. 열매는 불규칙적으로 벌어진다. ==> <span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">부정열개 삭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-4">22. 열매는 종적으로 갈라져 터진다. --> 23</p>
+
+<p class="indent-5">23. 격벽(자방실 사이의 격리막)으로 부터 판막이 부서지면서 터짐 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">포축개열 삭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-5">23. 격벽(적어도 일부분)에 붙은 판막이 남아있음 --> 24</p>
+
+<p class="indent-6">24. 열매는 심피실 격벽을 따라 터짐 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">포간개열 삭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+<p class="indent-6">24. 열매는 자방실과 격벽사이, 즉 배봉선을 따라서 터짐 ==><span style="font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">포배개열 삭과</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span>
+
+<p class="comment">출처 : 식물분류학 P78~79, Walter S. Judd외 저. 박기룡외 역. 2010, 신일북스</p>
+
+
+</td></tr>
+</table>
+
+
+ </body>
+</html>

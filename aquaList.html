@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>풍덩풍덩-생물분류기사(식물)300종</title>
+    <!-- 외부 CSS 파일 연결 -->
+<link href="style.css" rel="stylesheet" type="text/css">
+
+    <!-- 외부 JS 파일 연결 -->
+    <script src="script.js" defer></script>
+
+ </head>
+ <body>
+ <div class="header-container">
+  
+	  <h1 class="title"><생물분류기사(식물) 실기시험 출제예상 300종-풍덩풍덩></h1>
+
+		  <div class="size-control">
+			<label for="imageSizeSlider">이미지 조절: </label>
+				  <input type="range" id="imageSizeSlider" min="100" max="800" value="150" step="10" oninput="resizeAllImages(this.value)">
+				  <span id="sizeDisplay">150</span>px
+		</div>
+
+		<div class="scroll-control">
+			<label for="speedSlider">속도 조절: </label>
+			<input type="range" id="speedSlider" min="1" max="100" value="1" step="1" oninput="updateSpeed(this.value)">
+			<span id="speedValue">1</span> 픽셀/초
+			<button id="pauseButton" onclick="toggleScroll()">진행시켜</button>
+			<button onclick="restartScroll()">처음부터</button>
+		</div>
+
+</div>
+<p class="copyright">
+ 	**사용된 이미지 파일은 <a href="https://species.nibr.go.kr/" target="nibr">국립생물자원관(https://species.nibr.go.kr/)</a>에 있는 링크 이미지입니다. **<br>
+종명을 클릭하면 자원관의 해당 종 상세정보 페이지로 이동합니다.
+이미지를 클릭하면 자원관의 고해상도 사진으로 이동합니다. <br>
+자원관 사진이 시원치 않거나 동정포인트가 잘 안보이는 경우 "<a href="https://blog.naver.com/haegangchun" target="_blog">한국의 야생화 Wildflower Korea</a> "블로그 주소를 링크하였습니다.<br>
+오류및 개선사항 flowercrazer@gmail.com  웹호스팅 만료예정일 : 2025-03-19
+</p>
+<!-- 메뉴 버튼 -->
+<div class="menu-button" onclick="toggleMenu()">▶<br>▶<br>▶</div>
+
+<!-- 펼쳐질 메뉴 -->
+<div class="menu" id="sideMenu">
+<p><a href="/">출제300종모두</a></P>    
+<p class="level1">Phylum/CLASS</p>
+    <ul>
+        <li><a href="Pteridophyta.html">양치식물문(21)</a></li>
+		<li><a href="Pinopsida.html">나자식물문(10)</a></li>
+        <li><a href="Magnoliopsida.html">목련강(215)</a></li>
+        <li><a href="Liliopsida.html">백합강(54)</a></li>
+    </ul>
+	<p class="level1">오마카세</p>
+	 <ul>
+        <li><a href="redList.html">멸종위기종</a></li>
+        <li><a href="panicleList.html">다글다글</a></li>
+        <li><a href="tailList.html">꼬리꼬리</a></li>
+        <li><a href="aquaList.html">풍덩풍덩</a></li>
+    </ul>
+	<p class="level1">아쉬운것</p>
+	 <ul>
+        <li><a href="./myList.html">과일조아</a></li>
+		<li><a href="./FequalS.html">과=종</a></li>
+     </ul>
+	
+</div>
+<table height="61" border="0">																								
+	<tr>
+		<td> </td>
+	</tr>
+	</table>
+<table>																								
+<tr>
+	<td width="10">no</td><td width="100" align="center">	과명	<br><label><input type="checkbox" id="subjectCheckbox" onclick="toggleFamilyText()">보이기</label></td>
+	<td width="90">대표국명	<br><label><input type="checkbox" id="subjectCheckboxS" onclick="toggleSpeciesLinks()">보이기</label>	</td>
+	<td width="10" align="center">	멸위	</td><td align="center">		img	</td>
+</tr>
+	
+<tr>
+<td>1</td>
+<td class="family">	물고사리과	</td>
+<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000059677"target="_300">	물고사리</a>
+</td>
+<td align="center" bgcolor="green">	Ⅱ	</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059677/BIMGVP0000003096.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059677/thumb500/BIMGVP0000003096.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059677/2018083110243914998.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059677/thumb500/2018083110243914998.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059677/20170201232422118239.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059677/thumb500/20170201232422118239.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059677/BIMGVP0000011845.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059677/thumb500/BIMGVP0000011845.jpg" height="150"></a>
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td class="family">통발과</td>
+	<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000063421"target="_300">	통발</a>
+</td>
+<td align="center">		</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063421/BIMGVP0000020801.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063421/thumb500/BIMGVP0000020801.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063421/BIMGVP0000020805.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063421/thumb500/BIMGVP0000020805.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063421/BIMGVP0000020802.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063421/thumb500/BIMGVP0000020802.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063421/BIMGVP0000020804.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063421/thumb500/BIMGVP0000020804.jpg" height="150"></a>
+</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td class="family">	개미탑과	</td>
+<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000062216"target="_300">	이삭물수세미</a>
+</td>
+<td align="center">		</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062216/BIMGVP0000019436.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062216/thumb500/BIMGVP0000019436.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062216/BIMGVP0000008390_2020072210242819_480e27ys8z.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062216/thumb500/BIMGVP0000008390_2020072210242819_480e27ys8z.jpg" height="150"></a>
+<a href=""target="_300"> <img src="	" height="150"></a>
+<a href=""target="_300"> <img src="	" height="150"></a>
+</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td class="family">	생이가래과	</td>
+<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000059628"target="_300">	생이가래</a>
+</td>
+<td align="center">		</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059628/BIMGVP0000005098.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059628/thumb500/BIMGVP0000005098.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059628/BIMGVP0000021453.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000005/120000059628/thumb500/BIMGVP0000021453.jpg" height="150"></a>
+<a href=""target="_300"> <img src="	" height="150"></a>
+<a href=""target="_300"> <img src="	" height="150"></a>
+</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td class="family">가래과</td>
+	<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000064233"target="_300">	가래</a>
+</td>
+<td align="center">		</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064233/BIMGVP0000008540.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064233/thumb500/BIMGVP0000008540.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064233/BIMGVP0000024205.JPG"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064233/thumb500/BIMGVP0000024205.JPG" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064233/BIMGVP0000018745.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064233/thumb500/BIMGVP0000018745.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064233/BIMGVP0000018744.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064233/thumb500/BIMGVP0000018744.jpg" height="150"></a>
+</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td class="family">	조름나물과	</td>
+<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000062948"target="_300">	노랑어리연</a>
+</td>
+<td align="center">		</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062948/BIMGVP0000004585.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062948/thumb500/BIMGVP0000004585.jpg" height="150"></a>
+<a href=""target="_300"> <img src="	" height="150"></a>
+<a href=""target="_300"> <img src="	" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062948/BIMGVP0000370902_20201201162412241284.JPG"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062948/thumb500/BIMGVP0000370902_20201201162412241284.JPG" height="150"></a>
+</td>
+</tr>
+
+
+
+<tr>
+<td>7</td>
+<td class="family">수련과</td>
+	<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000060115"target="_300">	가시연</a>
+</td>
+<td align="center" bgcolor="green">	Ⅱ	</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060115/BIMGVP0000005519.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060115/thumb500/BIMGVP0000005519.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060115/20170201232421595708.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060115/thumb500/20170201232421595708.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060115/BIMGVP0000180145.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060115/thumb500/BIMGVP0000180145.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060115/20180831102435507222.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060115/thumb500/20180831102435507222.jpg" height="150"></a>
+</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td class="family">어항마름과</td>
+	<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000060125"target="_300">	순채</a>
+</td>
+<td align="center" bgcolor="green">	Ⅱ	</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060125/20180831102442012742.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060125/thumb500/20180831102442012742.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060125/BIMGVP0000011999.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060125/thumb500/BIMGVP0000011999.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060125/BIMGVP0000180138.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060125/thumb500/BIMGVP0000180138.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060125/BIMGVP0000180135.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060125/thumb500/BIMGVP0000180135.jpg" height="150"></a>
+</td>
+</tr>
+
+
+<tr>
+<td>9</td>
+<td class="family">	마름과	</td>
+<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000062255"target="_300">	마름</a>
+</td>
+<td align="center">		</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062255/BIMGVP0000004668.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062255/thumb500/BIMGVP0000004668.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062255/BIMGVP0000018891.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062255/thumb500/BIMGVP0000018891.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062255/BIMGVP0000018890.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062255/thumb500/BIMGVP0000018890.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062255/BIMGVP0000004667.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062255/thumb500/BIMGVP0000004667.jpg" height="150"></a>
+</td>
+</tr>
+
+
+<tr>
+<td>10</td>
+<td class="family">개구리밥과</td>
+	<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000064315"target="_300">	개구리밥</a>
+</td>
+<td align="center">		</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064315/BIMGVP0000005006.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064315/thumb500/BIMGVP0000005006.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064315/BIMGVP0000018934.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064315/thumb500/BIMGVP0000018934.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064315/BIMGVP0000005007.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064315/thumb500/BIMGVP0000005007.jpg" height="150"></a>
+<a href=""target="_300"> <img src="	" height="150"></a>
+</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td class="family">자라풀과</td>
+	<td class="species">
+<a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000064216"target="_300">	물질경이</a>
+</td>
+<td align="center">		</td>
+<td>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064216/BIMGVP0000005023.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064216/thumb500/BIMGVP0000005023.jpg" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064216/BIMGVP0000018732.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064216/thumb500/BIMGVP0000018732.jpg" height="150"></a>
+<a href=""target="_300"> <img src="	" height="150"></a>
+<a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064216/BIMGVP0000005024.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000064216/thumb500/BIMGVP0000005024.jpg" height="150"></a>
+</td>
+</tr>
+
+</table>
+
+ </Body>
+</html>

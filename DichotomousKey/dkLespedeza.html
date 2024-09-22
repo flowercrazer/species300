@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>생물분류기사(식물)300종</title>
+    <!-- 외부 CSS 파일 연결 -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+    <style>
+        /* 기본적으로 종명을 숨김 */
+        .species-name {
+            display: none;
+           /* color: red; /* 종명 텍스트를 붉은색으로 */
+        }
+    </style>
+    <!-- 외부 JS 파일 연결 -->
+    <script src="../script.js" defer></script>
+    <script>
+        function toggleSpeciesName() {
+            // 체크박스 상태를 가져옴
+            var checkBox = document.getElementById("toggleAnswer");
+            // 종명을 나타내는 모든 요소를 가져옴
+            var speciesNames = document.querySelectorAll(".species-name");
+
+            // 체크박스가 체크되었으면 종명을 보여주고, 아니면 숨김
+            speciesNames.forEach(function(name) {
+                if (checkBox.checked) {
+                    name.style.display = "inline";
+                } else {
+                    name.style.display = "none";
+                }
+            });
+        }
+    </script>
+ </head>
+ <body>
+ <div class="header-container">
+  
+	  <h1 class="title"><생물분류기사(식물) 실기시험 출제예상 300종-싸리속 검색표></h1>
+
+		  <div class="size-control">
+			<label for="imageSizeSlider">이미지 조절: </label>
+				  <input type="range" id="imageSizeSlider" min="100" max="800" value="150" step="10" oninput="resizeAllImages(this.value)">
+				  <span id="sizeDisplay">150</span>px
+		</div>
+
+		<div class="scroll-control">
+			<label for="speedSlider">속도 조절: </label>
+			<input type="range" id="speedSlider" min="1" max="100" value="1" step="1" oninput="updateSpeed(this.value)">
+			<span id="speedValue">1</span>픽셀/초
+			<button id="pauseButton" onclick="toggleScroll()">진행시켜</button>
+			<button onclick="restartScroll()">처음부터</button>
+		</div>
+
+</div>
+<p class="copyright">
+ 	**사용된 이미지 파일은 <a href="https://species.nibr.go.kr/" target="nibr">국립생물자원관(https://species.nibr.go.kr/)</a>에 있는 링크 이미지입니다. **<br>
+종명을 클릭하면 자원관의 해당 종 상세정보 페이지로 이동합니다.
+이미지를 클릭하면 자원관의 고해상도 사진으로 이동합니다. <br>
+자원관 사진이 시원치 않거나 동정포인트가 잘 안보이는 경우 "<a href="https://blog.naver.com/haegangchun" target="_blog">한국의 야생화 Wildflower Korea</a> "블로그 주소를 링크하였습니다.<br>
+오류및 개선사항 flowercrazer@gmail.com  웹호스팅 만료예정일 : 2025-03-19
+</p>
+<!-- 메뉴 버튼 -->
+<div class="menu-button" onclick="toggleMenu()">▶<br>▶<br>▶</div>
+
+<!-- 펼쳐질 메뉴 -->
+<div class="menu" id="sideMenu">
+<p class="indent-1"><a href="/">출제300종모두</a></P>    
+<p class="level1">Phylum/CLASS</p>
+     <ul>
+        <li><a href="../Pteridophyta.html">양치식물문(21)</a></li>
+		<li><a href="../Pinopsida.html">나자식물문(10)</a></li>
+        <li><a href="../Magnoliopsida.html">목련강(215)</a></li>
+        <li><a href="../Liliopsida.html">백합강(54)</a></li>
+    </ul>
+	<p class="level1">오마카세</p>
+	 <ul>
+        <li><a href="../redList.html">멸종위기종</a></li>
+        <li><a href="../panicleList.html">다글다글</a></li>
+        <li><a href="../tailList.html">꼬리꼬리</a></li>
+        <li><a href="../aquaList.html">풍덩풍덩</a></li>
+    </ul>
+		<p class="level1">검색표</p>
+	 <ul>
+		 <li><a href="dkPolypodiales.html">고사리목</a></li>
+        <li><a href="dkFagaceae.html">참나무과</a></li>
+		<li><a href="dkLespedeza.html">싸리속</a></li>
+		<li><a href="dkPinus.html">소나무속</a></li>
+
+		<li><a href="dkFruit.html">열매종류 검색표</a></li>
+		
+     </ul>
+	<p class="level1">아쉬운것</p>
+	 <ul>
+        <li><a href="../myList.html">과일조아</a></li>
+		<li><a href="../FequalS.html">과=종</a></li>
+     </ul>
+	
+</div>
+<table height="61" border="0">																								
+	<tr>
+		<td> </td>
+	</tr>
+	</table>
+
+
+
+	<table>
+<tr><td>
+
+	    <!-- 정답 보기(붉은색은 300종) 체크박스 추가 -->
+    <label>
+        <input type="checkbox" id="toggleAnswer" onclick="toggleSpeciesName()"> 정답 보기(붉은색은 300종)
+    </label>
+</td>
+	</tr>
+<tr><td>
+
+
+<h1> Lespedeza Michx. 싸리속</h1>
+
+<p class="indent-1">1. 관목이다. 꽃은 모두 유사하며, 개방화어다. 협과에는 짧은 과병이 었다.</p>
+	<p class="indent-2">2. 동아는 편평하며, 아린 및 잎은 2즐로 배열된다 --J. maximowiczii  <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">조록싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+	<p class="indent-2">2. 동아는 원통형이다. 아린 엎은 나선상으로 배열된다.</p>
+		<p class="indent-3">3. 총상화서는 화서 밑의 엎보다 짧다. 꽃은 조밀하게 달린다. 악편은 좁은 난형이며, 선단부는 점첨두이며 끝은 침상이다 -- 2. L. cyrtobotrya  <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">참싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+		<p class="indent-3">3. 총상화서는 화서 밑의 엎보다 길다. 꽃이 성기게 달린다. 악편은 아원형, 난형 또는 좁은 삼각상 난형이며, 원두, 예두 또는 점첨두이다.</p>
+			<p class="indent-4">4. 꽃은 길이 -1.6 cm 이며, 대개는 1.2 cm 이상이다. 기관은 관상부 기부에서 급격히 좁아져 화조로 된다. 익관은 용골관보다 분명히 짧고, 화조는 1/3 이하이다. 악편은 점첨두 또는 예두이고, 악통보다 길다.</p>
+				<p class="indent-5">5. 소엽은 두꺼운 혁질이고, 상면은 윤채가 있고, 털이 산생하거나 없으며, 엽연은 다소 반곡하거나 비후된다. 용골관은 기관 익판보다 길다-- 3, L. maritima (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">해변싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+				<p class="indent-5">5. 소엽은 얇은 혁짙이고, 상면은 윤채가 없고, 누운 털이 밀생하며, 엽연은 편평하고 비후되지 않는다. 용골관은 기관보다 짧거나 같다 --4. Lespedeza thunberqii subsp. formosa (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">풀싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+			<p class="indent-4">4. 꽃은 대개 길이 0.9--1.3 cm 이다. 기관은 관상早 기早에서 점차 좁아진다. 익판은 용골관보다 분명히 짧거나 길고, 화조는 1/3 이상이다. 악편은 둔두 또는 예두이고, 악통보다 짧거나 같다.</p>
+				<p class="indent-5">6. 식물체에는 털이 있다. 꽃은 4~12 개이다. 악편은 난형 또는 삼각상 난형으로 길이가 너비보다 길고, 둔두 또는 예두이다. 익관은 대개 용골판보다 짧다 -- 5. L. bicolor  <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+				<p class="indent-5">6. 식물체는 거의 무모이다. 꽃온 2~6 개이다. 악편은 아원형이고, 길이는 너비보다 짧으며, 원두이다. 익관은 용골판의 길이와 같거나 길다 -- 6. L. melanantha (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">검나무싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+<p class="indent-1">1.다년생 초본 또는 아관목이다. 꽃은 2 가지 형태로 짧은 화서에 달리는 폐쇄화서에 달리는 개방화가 었다. 협과에는 과병이 거의 발달하지 않는다.</p>
+	<p class="indent-2">7. 포복성 초본이다. 정생소엽은 넓은 도란형 또는 아원형이다--7. L. pilosa (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">팽이싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+	<p class="indent-2">7. 직립하거나 비스듬히 서는 초본 또는 아관목이다. 정생소엽은 좁은 도란형, 좁은타원형 또는 좁은 도삼각형이다.</p>
+		<p class="indent-3">8. 화경은 실처럼 가늘고, 옆으로 퍼진다. 줄기와 잎은 무모이거나 누운 털이 -- 8. L. virqata (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">좀싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+		<p class="indent-3">8. 화경은 굵고, 버스듬히 선다. 즐기와 잎은 털이 있다.</p>
+			<p class="indent-4">9. 개방화가 달리는 총상화서에는 화경이 있으며, 대개 잎보다 길다.</p>
+				<p class="indent-5">10. 즐기 및 잎에는 황갈색 털이 밀생한다. 즐기의 측지는 다소 직립한다. 개방화는 신장된 총상화서에 달리며, 길이 6--8 mm 이다 --9. L. tomentosa (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">개싸리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+				<p class="indent-5">10. 줄기 잎에는 백색 털이 산생한다. 줄기국 측지는 다소 비스듬히 선다. 개방화는 총상화서에 조밀하게 모여 달리며, 길이 1 cm 정도이다 --10. davurica (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">호비수리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+
+			<p class="indent-4">9. 개방화가 달리는 총상화서에는 화경이 거의 없으며, 대개 잎보다 짧다.</p>
+				<p class="indent-5">11. 정생소엽은 대개 좁은 도삼각형이다. 소엽의 맥은 불분명하다. 폐쇄화의 악편은 1 맥이 있고, 서로 겹치지 않는다. 협과는 악편보다 길고, 털이 산재하거나 무모이다-- 11. L. cuneata  <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">비수리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+				<p class="indent-5">11. 정생소엽은 좁은 도란형 또는 좁은 타원형 내지 타원형이다. 소엽맥은 분명하다. 폐쇄화의 악편은 3—5 맥 있고, 기부에서 서로 겹친다. 협과는 악편보다 짧거나 같고, 털이 밀생한다.</p>
+					<p class="indent-6">12. 즐기의 측지는 옆으로 퍼진다. 소엽은 좁은 타원형 내지 타원형이며, 길이 0.6~2.5 cm, 너버 0.2--1.2 cm 이다. 화경은 길이 1 정도이다 -- 12. L. inschanica (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">청비수리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+					<p class="indent-6">12. 즐기의 측지는 비스듬히 선다. 잎은 대부분 좁은 도란형이며, 길이 1.0--1.5 너비 2~ 6 mm 이다. 소화경은 길이 2mm 이상이다 -- 13. L. juncea (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">땅비수리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+
+<p class="comment">출처 : 생태환경 이용 및 관리기술-한반도 관속식물 분류군 검색표,2011, 환경부</p>
+
+</td></tr>
+</table>
+
+
+ </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>생물분류기사(식물)300종</title>
+    <!-- 외부 CSS 파일 연결 -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+    <style>
+        /* 기본적으로 종명을 숨김 */
+        .species-name {
+            display: none;
+           /* color: red; /* 종명 텍스트를 붉은색으로 */
+        }
+    </style>
+    <!-- 외부 JS 파일 연결 -->
+    <script src="../script.js" defer></script>
+    <script>
+        function toggleSpeciesName() {
+            // 체크박스 상태를 가져옴
+            var checkBox = document.getElementById("toggleAnswer");
+            // 종명을 나타내는 모든 요소를 가져옴
+            var speciesNames = document.querySelectorAll(".species-name");
+
+            // 체크박스가 체크되었으면 종명을 보여주고, 아니면 숨김
+            speciesNames.forEach(function(name) {
+                if (checkBox.checked) {
+                    name.style.display = "inline";
+                } else {
+                    name.style.display = "none";
+                }
+            });
+        }
+    </script>
+ </head>
+ <body>
+ <div class="header-container">
+  
+	  <h1 class="title"><생물분류기사(식물) 실기시험 출제예상 300종-참나무과 검색표></h1>
+
+		  <div class="size-control">
+			<label for="imageSizeSlider">이미지 조절: </label>
+				  <input type="range" id="imageSizeSlider" min="100" max="800" value="150" step="10" oninput="resizeAllImages(this.value)">
+				  <span id="sizeDisplay">150</span>px
+		</div>
+
+		<div class="scroll-control">
+			<label for="speedSlider">속도 조절: </label>
+			<input type="range" id="speedSlider" min="1" max="100" value="1" step="1" oninput="updateSpeed(this.value)">
+			<span id="speedValue">1</span>픽셀/초
+			<button id="pauseButton" onclick="toggleScroll()">진행시켜</button>
+			<button onclick="restartScroll()">처음부터</button>
+		</div>
+
+</div>
+<p class="copyright">
+ 	**사용된 이미지 파일은 <a href="https://species.nibr.go.kr/" target="nibr">국립생물자원관(https://species.nibr.go.kr/)</a>에 있는 링크 이미지입니다. **<br>
+종명을 클릭하면 자원관의 해당 종 상세정보 페이지로 이동합니다.
+이미지를 클릭하면 자원관의 고해상도 사진으로 이동합니다. <br>
+자원관 사진이 시원치 않거나 동정포인트가 잘 안보이는 경우 "<a href="https://blog.naver.com/haegangchun" target="_blog">한국의 야생화 Wildflower Korea</a> "블로그 주소를 링크하였습니다.<br>
+오류및 개선사항 flowercrazer@gmail.com  웹호스팅 만료예정일 : 2025-03-19
+</p>
+<!-- 메뉴 버튼 -->
+<div class="menu-button" onclick="toggleMenu()">▶<br>▶<br>▶</div>
+
+<!-- 펼쳐질 메뉴 -->
+<div class="menu" id="sideMenu">
+<p class="indent-1"><a href="/">출제300종모두</a></P>    
+<p class="level1">Phylum/CLASS</p>
+     <ul>
+        <li><a href="../Pteridophyta.html">양치식물문(21)</a></li>
+		<li><a href="../Pinopsida.html">나자식물문(10)</a></li>
+        <li><a href="../Magnoliopsida.html">목련강(215)</a></li>
+        <li><a href="../Liliopsida.html">백합강(54)</a></li>
+    </ul>
+	<p class="level1">오마카세</p>
+	 <ul>
+        <li><a href="../redList.html">멸종위기종</a></li>
+        <li><a href="../panicleList.html">다글다글</a></li>
+        <li><a href="../tailList.html">꼬리꼬리</a></li>
+        <li><a href="../aquaList.html">풍덩풍덩</a></li>
+    </ul>
+		<p class="level1">검색표</p>
+	 <ul>
+		 <li><a href="dkPolypodiales.html">고사리목</a></li>
+        <li><a href="dkFagaceae.html">참나무과</a></li>
+		<li><a href="dkLespedeza.html">싸리속</a></li>
+		<li><a href="dkPinus.html">소나무속</a></li>
+
+		<li><a href="dkFruit.html">열매종류 검색표</a></li>
+		
+     </ul>
+	<p class="level1">아쉬운것</p>
+	 <ul>
+        <li><a href="../myList.html">과일조아</a></li>
+		<li><a href="../FequalS.html">과=종</a></li>
+     </ul>
+	
+</div>
+<table height="61" border="0">																								
+	<tr>
+		<td> </td>
+	</tr>
+	</table>
+
+
+
+	<table>
+<tr><td>
+
+	    <!-- 정답 보기(붉은색은 300종) 체크박스 추가 -->
+    <label>
+        <input type="checkbox" id="toggleAnswer" onclick="toggleSpeciesName()"> 정답 보기(붉은색은 300종)
+    </label>
+</td>
+	</tr>
+<tr><td>
+  <h1>참나무과</h1>
+    <h2>속 검색표</h2>
+    <p class="indent-1">1. 열매는 1개의 견과가 들어있는 도토리(acorn)이며, 견과는 횡단면이 둥글고, 인편이 있는 각두에 부분적으로 싸인다. 각두는 갈라지지 않고, 봉선이나 관열이 없으며, 인편은 가시 모양으로 발달하지 않는다 -- 4. <strong>Quercus</strong>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">참나무속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+    <p class="indent-1">1. 열매는 1~여러 개의 견과이며, 견과는 횡단면이 삼각형이거나 둥글고, 성숙할 때까지 가시가 있는 각두에 완전히 밀폐된다. 총포편은 2~4 (~8 또는 이상)이며, 이생하거나 봉선을 따라 가장자리가 유합한다. -->2</p>
+
+    <p class="indent-2">2. 수꽃은 다수가 두상화서에 달리며, 암꽃은 같은 화경에 쌍으로 달린다. 총포편은 4장이고, 견과는 삼각상이며, 자엽은 발아시 지상부로 나온다 ==&gt; 1. <strong>Faqus</strong> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">너도밤나무속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+    <p class="indent-2">2. 수꽃은 곧게 서는 미상화서에 달리며, 암꽃은 총포당 1~3개씩 달린다. 총포는 갈라지지 않거나 불규칙하게 갈라지며, 견과는 구형이며, 자엽은 발아시 지하부에 남는다. -->3</p>
+
+   <p class="indent-3">3. 낙엽성 교목으로 정아는 없다. 암꽃은 총포당 1~3개씩 달리고, 자방은 6실이며, 화주는 6개, 이생한다 ==&gt; <strong>Castanea</strong>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">밤나무속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+   <p class="indent-3">3. 상록성 교목으로 정아가 있다. 꽃은 총포당 1개씩 달리고, 자방은 3실이며, 화주는 3개, 기부에서 합생한다 ==&gt; <strong>Castanopsis</strong> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">모밀잣밤나무속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+    <h2>2. <strong>Castanea Mill.</strong> 밤나무속</h2>
+    <h3>종 검색표</h3>
+    <p class="indent-2">1. 잎 하면에는 흔히 인편상 분비선이 없으며, 적어도 어릴 때는 면모나 성상모가 밀생한다 ==&gt; <em>mollissima</em> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">약밤나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+    <p class="indent-2">1. 잎 하면에 인편상 분비선 혹은 면모가 있다 ==&gt; <em>creanata</em> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">밤나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+    <h2>3. <strong>Castanopsis (D. Don) Spach</strong> 모밀잣밤나무속</h2>
+    <h3>종 검색표</h3>
+    <p class="indent-2">1. 소지는 가늘다. 엽연은 전연이거나 드물게 선단부에만 짧은 예거치가 있으며, 하면에는 적갈색 또는 은색 털이 있다. 견과는 난상 구형(길이/너비 = 0.8~1.3), 길이 0.6-1.3 cm이다 ==&gt; <em>cuspidata</em> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">모밀잣밤나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+    <p class="indent-2">1. 소지는 굵다. 엽연에는 짧은 예거치가 있으며, 하면에는 갈색 털이 있다. 견과는 난형 또는 타원형(길이/너비 = 1.4~2.2), 길이 1.2~2.1 cm이다 ==&gt; <em>sieboldii</em> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">구실잣밤나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+    <h2>4. <strong>Quercus L.</strong> 참나무속</h2>
+    <h3>종 검색표</h3>
+    <p class="indent-1">1. 낙엽성 교목이며, 각두의 포린은 복와상이다. -->2</p>
+
+    <p class="indent-2">2. 잎에는 가시같은 거치가 있다. 열매는 2년만에 익는다. -->3</p>
+
+   <p class="indent-3">3. 수피에 코르크층이 발달한다. 하면에는 백색 성상모가 밀생한다 ==&gt; <em>variabilis</em> <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">굴참나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+   <p class="indent-3">3. 수피에 코르크층이 발달하지 않는다. 하면은 맥액에 충생모를 제외하고는 무모이거나 단모가 드물게 있다 ==&gt; <em>acutissima</em> <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">상수리나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+    <p class="indent-2">2. 잎에는 가시같은 거치가 없다. 열매는 당해에 익는다. -->4</p>
+    
+   <p class="indent-3">4. 엽저는 이저이고, 엽병은 길이 1 cm 이하이다. -->5</p>
+    
+   <p class="indent-4">5. 가지는 굵고, 적어도 어릴 때는 황색의 장연 또는 밀던모(성상모)가 밀생한다. 엽연의 거치는 둥근 치아상이다. 각두의 포린은 선형이고, 신장되며, 넓게 퍼지거나 다소 젖혀진다 ==&gt; <em>dentata</em> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">떡갈나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+   <p class="indent-4">5. 가지는 가늘고, 무모이거나 어릴 때는 약간의 단모가 있다. 엽연의 거치는 불규칙하고, 파상이며, 선단부는 무디거나 뾰족하다. 각두의 포린은 짧고 눌려있다 ==&gt; <em>monqolica</em> <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">신갈나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+   <p class="indent-3">4. 엽저는 설저이고, 엽병은 길이 1~3 cm이다. -->6</p>
+    
+   <p class="indent-4">6. 잎은 길이 10~25 (~35) cm이고, 측맥은 10~15쌍이며, 하면에는 성상모만 있다 ==&gt; <em>aliena</em> <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">갈참나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+   <p class="indent-4">6. 잎은 길이 6~15 cm이고, 측맥은 7~12쌍이며, 하면에 단모와 성상모가 밀생한다 ==&gt; <em>serrata</em> <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">졸참나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+    <p class="indent-1">1. 상록성 교목이며, 각두는 동심원상이다. -->7</p>
+    
+    <p class="indent-2">7. 잎은 전연이거나 선단부에 소수의 예거치가 있다 ==&gt; <em>acuta</em> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">붉가시나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+    <p class="indent-2">7. 잎에는 최소한 5 이상의 거치가 있다. -->8</p>
+
+   <p class="indent-3">8. 하면에는 황갈색 털이 밀생한다. -->9</p>
+    
+   <p class="indent-4">9. 잎은 도피침형 내지 넓은 도피침형이며, 성숙한 잎의 하면, 소지, 엽병에는 황갈색 털이 밀생한다 ==&gt; <em>gilva</em>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">개가시나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+   <p class="indent-4">9. 잎은 장타원형, 타원형 내지 도란상 장타원형이며, 하면에 회갈색 털이 산생한다 ==&gt; <em>glauca</em> <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">종가시나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+   <p class="indent-3">8. 하면에는 털이 거의 없고, 회백색이다. -->10</p>
+    
+   <p class="indent-4">10. 가지는 다소 굵고, 자갈색이다. 엽연에는 짧고 뾰족한 소예거치가 있으며(느티나무형), 하면에는 털이 거의 없고 뚜렷한 회백색이다. 견과는 당해 가을에 익는다 ==&gt; <em>myrsinifolia</em> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">가시나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+   <p class="indent-4">10. 가지는 가늘고 회갈색이다. 엽연에는 길고 뾰족한 예거치가 있으며(졸참나무형), 하면에는 처음에는 털이 있었으나 모두 없어지고, 백남질이 된다. 견과는 이듬해 가을에 익는다 ==&gt; <em>salicina</em> (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">참가시나무</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+
+
+
+
+</td></tr>
+</table>
+
+
+ </body>
+</html>

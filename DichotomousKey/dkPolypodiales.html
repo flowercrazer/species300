@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>생물분류기사(식물)300종</title>
+    <!-- 외부 CSS 파일 연결 -->
+<link href="../style.css" rel="stylesheet" type="text/css">
+    <style>
+        /* 기본적으로 종명을 숨김 */
+        .species-name {
+            display: none;
+           /* color: red; /* 종명 텍스트를 붉은색으로 */
+        }
+    </style>
+    <!-- 외부 JS 파일 연결 -->
+    <script src="../script.js" defer></script>
+    <script>
+        function toggleSpeciesName() {
+            // 체크박스 상태를 가져옴
+            var checkBox = document.getElementById("toggleAnswer");
+            // 종명을 나타내는 모든 요소를 가져옴
+            var speciesNames = document.querySelectorAll(".species-name");
+
+            // 체크박스가 체크되었으면 종명을 보여주고, 아니면 숨김
+            speciesNames.forEach(function(name) {
+                if (checkBox.checked) {
+                    name.style.display = "inline";
+                } else {
+                    name.style.display = "none";
+                }
+            });
+        }
+    </script>
+ </head>
+ <body>
+ <div class="header-container">
+  
+	  <h1 class="title"><생물분류기사(식물) 실기시험 출제예상 300종-고사리목 검색표></h1>
+
+		  <div class="size-control">
+			<label for="imageSizeSlider">이미지 조절: </label>
+				  <input type="range" id="imageSizeSlider" min="100" max="800" value="150" step="10" oninput="resizeAllImages(this.value)">
+				  <span id="sizeDisplay">150</span>px
+		</div>
+
+		<div class="scroll-control">
+			<label for="speedSlider">속도 조절: </label>
+			<input type="range" id="speedSlider" min="1" max="100" value="1" step="1" oninput="updateSpeed(this.value)">
+			<span id="speedValue">1</span>픽셀/초
+			<button id="pauseButton" onclick="toggleScroll()">진행시켜</button>
+			<button onclick="restartScroll()">처음부터</button>
+		</div>
+
+</div>
+<p class="copyright">
+ 	**사용된 이미지 파일은 <a href="https://species.nibr.go.kr/" target="nibr">국립생물자원관(https://species.nibr.go.kr/)</a>에 있는 링크 이미지입니다. **<br>
+종명을 클릭하면 자원관의 해당 종 상세정보 페이지로 이동합니다.
+이미지를 클릭하면 자원관의 고해상도 사진으로 이동합니다. <br>
+자원관 사진이 시원치 않거나 동정포인트가 잘 안보이는 경우 "<a href="https://blog.naver.com/haegangchun" target="_blog">한국의 야생화 Wildflower Korea</a> "블로그 주소를 링크하였습니다.<br>
+오류및 개선사항 flowercrazer@gmail.com  웹호스팅 만료예정일 : 2025-03-19
+</p>
+<!-- 메뉴 버튼 -->
+<div class="menu-button" onclick="toggleMenu()">▶<br>▶<br>▶</div>
+
+<!-- 펼쳐질 메뉴 -->
+<div class="menu" id="sideMenu">
+<p class="indent-1"><a href="/">출제300종모두</a></P>    
+<p class="level1">Phylum/CLASS</p>
+     <ul>
+        <li><a href="../Pteridophyta.html">양치식물문(21)</a></li>
+		<li><a href="../Pinopsida.html">나자식물문(10)</a></li>
+        <li><a href="../Magnoliopsida.html">목련강(215)</a></li>
+        <li><a href="../Liliopsida.html">백합강(54)</a></li>
+    </ul>
+	<p class="level1">오마카세</p>
+	 <ul>
+        <li><a href="../redList.html">멸종위기종</a></li>
+        <li><a href="../panicleList.html">다글다글</a></li>
+        <li><a href="../tailList.html">꼬리꼬리</a></li>
+        <li><a href="../aquaList.html">풍덩풍덩</a></li>
+    </ul>
+		<p class="level1">검색표</p>
+	 <ul>
+		 <li><a href="dkPolypodiales.html">고사리목</a></li>
+        <li><a href="dkFagaceae.html">참나무과</a></li>
+		<li><a href="dkLespedeza.html">싸리속</a></li>
+		<li><a href="dkPinus.html">소나무속</a></li>
+
+		<li><a href="dkFruit.html">열매종류 검색표</a></li>
+		
+     </ul>
+	<p class="level1">아쉬운것</p>
+	 <ul>
+        <li><a href="../myList.html">과일조아</a></li>
+		<li><a href="../FequalS.html">과=종</a></li>
+     </ul>
+	
+</div>
+<table height="61" border="0">																								
+	<tr>
+		<td> </td>
+	</tr>
+	</table>
+
+
+
+	<table>
+<tr><td>
+
+	    <!-- 정답 보기(붉은색은 300종) 체크박스 추가 -->
+    <label>
+        <input type="checkbox" id="toggleAnswer" onclick="toggleSpeciesName()"> 정답 보기(붉은색은 300종)
+    </label>
+</td>
+	</tr>
+<tr><td>
+
+<h1>고사리목 검색표</h1>
+
+    <h3>고비속 검색표</h3>
+<p class="indent-1">1. 잎은 2 우상복엽이다 ==>O. Japonica <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">고비</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+<p class="indent-1">1. 잎은 1희 우상복엽-우열이다.</p>
+   <p class="indent-2">2. 포자엽 전체에 포자낭이 달리며, 포자엽에는 녹색의 엽육이 전혀 발달하지 않는다 ==> cinnamomea <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">꿩고비</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+   <p class="indent-2">2. 포자엽의 중부에 포자낭이 달리며, 포자낭이 달리지 않는 상부와 하부 우편은 엽육이 정상적으로 발달한다==>claytoniana (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">음양고비</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+    <h2>고란초과 속 검색표</h2>
+<p class="indent-1">1. 잎에 별 모양의 털이 있다 --(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">석위속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="indent-1">1. 잎에 털이 없거나 있어도 별 모양이 아니다.</p>
+	<p class="indent-2">2. 엽신은 단엽으로 전연 또는 전연에 가까우며, 적어도 결각이 지거나 분열하지는 않는다.</p>
+		<p class="indent-3">3. 포자낭군은 신장하여 선형이거나, 또는 포자엽 이면을 넓게 덮는다.</p>
+			<p class="indent-4">4. 잎은 한 종류이다. 포자낭은 신장하여 선형이며, 중륵에 비스듬히 생긴다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">손고비속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+			<p class="indent-4">4. 잎은 종류이다. 포자낭온 포자엽 이면을 넓게 덮는다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">콩짜개덩굴속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+		<p class="indent-3">3. 포자낭군은 원형, 타원형 또는 장타원형이다.</p>
+			<p class="indent-4">5. 포자낭군에는 방페형 인편이 없다.</p>
+				<p class="indent-5">6. 포자낭군온 중콕의 양쪽에 규칙적으로 1열로 배열한다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">고란초속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+				<p class="indent-5">6. 포자낭군은 전체에 흘어져 있거나 중륵 양쭉에 불규칙하게 1 내지 2열로 배열한다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">밤일엽아재비속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+			<p class="indent-4">5. 어린 포자낭군은 방페형 인편으로 덮인다.</p>
+				<p class="indent-5">7. 잎은 얇은 초질이며, 엽맥은 뚜렷하고, 포자낭군은 중륵 양쪽에 흩어져 있다. 지하경에 있는 인편의 앞면에는 털이 뭉쳐져 난다 -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">밤일엽속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+				<p class="indent-5">7. 잎은 두꺼우며, 엽맥이 불분명하고, 포자낭군은 중륵 양쭉에 1열로 배열한다. 지하경에 었는 인편의 앞면에는 털이 없다.</p>
+					<p class="indent-6">8. 잎은 한 종류이다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">일엽초속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+					<p class="indent-6">8. 잎은 두 종류로서 포자엽과 영양엽이 크게 차이가 나거나 약간 차이가 난다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">콩짜개덩굴속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+	<p class="indent-2">2. 엽신 우열하거나 1 또는 2 우상분열 또는 다양하게 결각이 진다.</p>
+		<p class="indent-3">9. 포자낭군은 신장하여 선형이다.</p>
+			<p class="indent-4">10. 엽맥은 망상맥으로 유리소맥이 있다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">손고비속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+			<p class="indent-4">10. 엽맥은 유리맥으로 차상으로 분지한다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">좀고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+		<p class="indent-3">9. 포자낭군은 원형, 타원형 또는 장타원형이다.</p>
+			<p class="indent-4">11. 엽맥은 유리맥 또는 망상맥이며, 망극은 중똑 앙쭉에 1열씩만 배열되며, 분지하지 않은 유리소맥을 가진다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">미역고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+			<p class="indent-4">11. 엽맥은 통상 망상맥이며 망극은 발달하고, 분지된 유리소맥을 가진다.</p>
+				<p class="indent-5">12. 어린 포자낭군은 방페형 인편으로 덮인다 --(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">밤일엽속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+				<p class="indent-5">12. 포자낭군에는 방패형 인편이 없다.</p>
+					<p class="indent-6">13. 포자낭군은 중륵의 양쭉에 규칙적으로 1열씩 배열한다---(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">고란초속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+					<p class="indent-6">13. 포자낭군은 흘어져 있거나 중륵 앙쪽에 불규칙적으로 1 내지 2 배열한다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">밤일엽아재버속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+
+<h3>석위속 종검색표</h3>
+
+<p class="indent-1">1.잎은 극형 흑온 새발모양으로 나누어진다 --(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">세뿔석위</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="indent-1">1. 잎온 단엽으로 전연이다.</p>
+	<p class="indent-2">2. 잎은 피침형에서 넓은 난형으로 엽병이 길게 발달하고, 포자낭군은 뒷면에 빽빽이 달린다.</p>
+		<p class="indent-3">3. 잎의 길이는 30—40 cm로서, 지하경에 떨어져 나며, 엽병에 홈이 없다--<span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">석위</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+		<p class="indent-3">3. 잎의 길이는 5—10 cm로서 지하경에 가깝게 달리며, 엽병에 홈이 있다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">애기석위</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">2. 잎은 선형으로 엽병은 없거나 짧다. 포자낭군은 중륵 양쭉에 1 내지 수열로 배열한다.</p>
+		<p class="indent-3">4. 잎은 폭이 1cm 미만으로 엽병이 없으며, 포자낭군은 중륵 양쭉에 1내지 2열로 달린다--<span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">우단일엽</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+		<p class="indent-3">4. 잎은 폭이 1cm 이상이며, 짧은 엽병이 있고, 포자낭군은 중륵 양쭉에 여러 열로 달린다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">우단석위</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+<h3>고란초속 종 검색표</h3>
+<p class="indent-1">1. 잎은 낙엽성으로 우열한다. -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">층층고란초</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="indent-1">1. 잎은 상록성으로 단엽 또는 같래 진다.</p>
+	<p class="indent-2">2. 잎은 통상 단엽으로 중부가 가장 넓고 기早는 쾌기꼴이다. 엽선온 점첨두이다 -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">큰고란초</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">2. 잎은 단엽 또는 세같래 지고, 단엽일 때는 기부가 가장 넓고, 기부는 쐐기꼴 또는 평저이다. 엽선은 예두이다--<span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">고란초</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+<h2>관중과 속검색표</h2>
+<p class="indent-1">1. 포막은 함입부가 없는 등근 방패형이다.</p>
+	<p class="indent-2">2. 엽맥은 망극을 가진 망상맥 --<span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">쇠고비속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+	<p class="indent-2">2. 엽맥은 유리맥이다 --(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">십자고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="indent-1">1. 포막은 함입부가 있는 등근 신장형이다.</p>
+	<p class="indent-2">3. 엽신온 최하전측 분기를 한다.</p>
+		<p class="indent-3">4. 중측, 우측 및 소우축의 앞면에 강모가 없다.</p>
+			<p class="indent-4">5. 엽신은 지질 또는 혁질이다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">쇠고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+			<p class="indent-4">5. 엽신은 얇은 초질이다  관중속 (19. D. maximowiczii 진저리고사리)
+		<p class="indent-3">4. 중측, 우측 소우측의 앞면에 강모가 백백이 또는 성글게 붙는다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">왁살고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">3. 엽신은 하부의 1 또는 2개의 우편을 제외하고는 최하부측 분기 또는 최하 전후측 동시 분기를 한다.</p>
+		<p class="indent-3">6. 중측과 우축에는 모앙의 인편이 었지만, 털은 거의 없거나 드물게 선모가 있다 --(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">관중속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+		<p class="indent-3">6. 중죽과 우죽에는 다세포성의 관절모가 있다 -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">남방고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+
+<h3>꼬리고사리속 종검색표</h3>
+
+<p class="indent-1">1. 잎은 단엽으로 전연 또는 파상거치가 었다.</p>
+	<p class="indent-2">2. 잎의 기부는 이저 또는 심장저이고, 엽맥은 유러맥이며, 인접한 소맥에서의 포자낭군은 서로 마주본다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">골고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">2. 잎의 기부는 점차로 좁아지는 쐐기형이고, 엽맥은 망상맥이며, 인접한 소맥에서의 포자낭군은 서로 등지고 었다.</p>
+		<p class="indent-3">3. 끝은 신장하지 않고, 무성아도 달리지 않는다. 엽맥은 단순하거나 1회 분지하며, 엽연과 평행하게 달리고, 끝이 서로 연결된다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">파초일엽</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+		<p class="indent-3">3. 잎은 길게 신장하고, 무성아가 달린다. 엽맥은 1--4개의 망극으로 구성된 망상맥이다--<span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">거미고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+<p class="indent-1">1. 잎은 우상복엽이다. </p>
+	<p class="indent-2">4. 지하경은 옆으로 길게 긴다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">지느러미고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">4. 지하경은 짧고, 곧거나 흑은 비스듬히 선다.</p>
+		<p class="indent-3">5. 엽신은 1회우상복엽으로 가장자리는 거의 전연, 치아상거치 또는 둔거처이다.</p>
+			<p class="indent-4">6. 중축에 무성아가 달리지 않는다.</p>
+				<p class="indent-5">7. 우편의 길이는 폭의 3 이상이다 -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">눈썹고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+				<p class="indent-5">7. 우편의 길이는 폭의 2 미만이다.</p>
+					<p class="indent-6">8. 우편은 적어도 중부에서는 중측으로 흐른다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">거미꼬리고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+					<p class="indent-6">8. 우편은 중축으로 흐르지 않는다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">반들깃고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+			<p class="indent-4">6. 중측에 무성아가 있다.</p>
+				<p class="indent-5">9. 早편은 길이 2-4cm이며, 통상 길이는 폭의 3 이상이다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">선녀고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+				<p class="indent-5">9. 우편은 길이 2cm 미만이며, 통상 길어는 폭의 2 미만이다.</p>
+					<p class="indent-6">10. 엽병과 중측에 날개가 었으며, 우편의 엽저는 넓은 쐐기형이다.</p>
+						<p class="indent-1">11. 엽병과 중축의 날개는 2개이다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">차꼬리고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+						<p class="indent-1">11. 엽병과 중측의 날개는 3개이다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">개차꼬리고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+					<p class="indent-6">10. 엽병과 중축에 날개가 없으며, 우편의 엽저는 평저이다.</p>
+						<p class="indent-2">12. 우편의 가장자러는 결각이 깊으며, 앞쭉 밑부분의 귀모앙 돌기가 뚜렷하다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">개차꼬리고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+						<p class="indent-2">12. 우편의 가장자리는 전연에 가까우며, 앞쪽 밑부분의 귀모앙 돌기는 뚜렷하지 않다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">깃고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+		<p class="indent-3">5. 엽신은 1회우상복엽-우열--4회 우상복엽이다.</p>
+			<p class="indent-4">13. 최종열편은 대부분 선형에 가까우며, 가장자리는 전연으로 맥과 포자낭군이 1개씩 있다.</p>
+				<p class="indent-5">14. 중축은 신장하고, 끝에 무성아가 생기며, 가장자리에 약하게 날개가 발달한다. 최종열편은 원두이다 --(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">숫둘담고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+				<p class="indent-5">14. 중측온 신장하지 않고, 끝에 무성아가 생기지 않으며, 가장자리에 날개가 뚜렷하다. 최종열편은 예두 또는 둔두이다 --(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">쪽잔고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+			<p class="indent-4">13. 최종열편은 선형이 아니고, 가장자리에 치아상거치가 있으며, 맥과 포자낭군이 여러개 있다.</p>
+				<p class="indent-5">15. 우편의 길이는 폭보다 거의 4 배 이상 길며, 선단부가 점첨두에서부터 미두이다 -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">잔눈썹고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+				<p class="indent-5">15. 우편의 길이는 폭보다 3 배를 초과하지 않으며, 선단부가 둔두, 원두, 평두, 드물게 예두이다.</p>
+					<p class="indent-6">16. 중측은 앞면에 홈이 없다.</p>
+						<p class="indent-7">17. 엽병 기부의 인편은 털이 없다. 엽신은 기부 부근이 가장 넓다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">돌담고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+						<p class="indent-7">17. 엽병 기부의 인편은 털이 있다. 엽신은 중부가 가장 넓고 기부를 향하여 약간 좁아진다 --(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">사철고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+					<p class="indent-6">16. 중측은 앞면에 흠이 었다.</p>
+						<p class="indent-7">18. 잎은 좁은 타원형 또는 도피침형으로 중부 또는 중부 윗부분이 가장 넓고, 기부를 향하여 좁아지며, 영양엽이 보다 작고 비스듬히 서는 반면, 포자엽은 보다 크고 곧게 서서 형태가 약간 다른 두 종류이다--<span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">꼬리고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+						<p class="indent-7">18. 잎은 피침형에서 난형까지로 기부가 가장 넓고, 좁아지지 않는다. 엽신은 한 종류이다.</p>
+							<p class="indent-8">19. 식吾체는 높이 20--60 cm 정도이다 -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">수수고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+							<p class="indent-8">19. 식물체는 높이가 10 cm 미만이다.</p>
+								<p class="indent-9">20. 잎은 혁질로서 최종열편은 부채형, 마름모형-원형으로 포막은 가장자리에 술이 달린다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">돌좀고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+								<p class="indent-9">20. 잎은 초질로서 최종열편은 도삼각형, 삼각형 또는 마름모형이 포막은 가장자리가 전연이다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">애기꼬리고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+
+<h2> 야산고비과 속 검색표</h2>
+<p class="indent-1">1. 지하경은 옆으로 기고, 지하에 포복경이 없으며, 엽병은 앞면이 다소 편평하고, 영양엽과 포자엽온 하부로 향하여 좁아지지 않는다.</p>
+	<p class="indent-2">2. 영앙엽의 우편은 전연 또는 파상연이고, 엽맥은 유리소맥이 없는 망상맥이며, 포자엽은 2회 우상복엽으로 소우편은 구슬모양이다 -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">야산고비속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">2. 영양엽의 우편은 우열하고, 엽맥은 유리맥이며, 포자엽은 1 우상복엽으로 우편은 선형이다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">개면마속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="indent-1">1. 지하경은 곧게 서고, 지하에 포복경이 었으며, 엽병은 앞면에 홈이 있고, 영앙엽과 포자엽은 하부를 향하여 점진적으로 좁아진다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">청나래고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+<h2>잔고사리과 속검색표</h2>
+<p class="indent-1">1. 포자낭군은 항상 단생한다. 안쭉 포막은 뚜렷하다.</p>
+	<p class="indent-2">2. 포자낭군온 단일 맥 끝의 잎 가장자리에 달리며, 안쪽 포막과 바깥쭉 잎 가장자리가 유합하여 컵모양이 된다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">잔고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">2. 포자낭군은 단일 맥 끝의 잎 가장자리 또는 근처에 달리며, 안쪽 포막과 바깥쪽 잎 가장자리가 유합하여 주머니 모양이 된다-- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">돌잔고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="indent-1">1. 포자낭군은 단생하거나 서로 유합한 연결맥 끝의 잎 가장자리를 따라 신장한다. 안쪽 포막은 퇴화하여 흔적적이거나 바깔쪽의 가짜 포막에 가려있거나 또는 없다.</p>
+	<p class="indent-2">3. 포자낭군은 서로 유합한 연결맥 끝의 가장자리를 따라 신장하며, 가장자리가 뒤로 말려 바깔쭉 가짜 포막이 생긴다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">고사리속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">3. 포자낭군은 단일 맥 끝에 하나씩 달리며, 포막은 없지만 가끔 잎 가장자리의 치아상거치가 뒤로 말려 가짜 포막이 생긴다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">점고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+
+<h3>잔고사리속 검색표</h3>
+<p class="indent-1">1. 잎에 털이 빽빽이 붙고, 지하경온 짧고 직경이 1mm 정도이며, 포막에 털이 있다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">잔고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p> 
+<p class="indent-1">1. 잎은 거의 무모에 가깝고, 지하경은 신장하고 직경 5 mm 정도이며, 포막에 털이 없다 -- <span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">황고사리</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+
+
+<h2>고사리삼과 속검색표-2022기출, 안나옴</h2>
+<p class="indent-1">1. 영양엽편은 우상 또는 세 갈래로 나누어지며, 엽맥은 개방 차상맥이다.</p>
+	<p class="indent-2">2. 지하경은 곧게 서며, 영앙엽편과 생식엽편은 우상으로 나누어지고 포자낭은 나출된다--(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">고사리삼속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+	<p class="indent-2">2. 지하경은 수평으로 기고, 영양엽편은 세 같래지며, 열편은 다시 두 부분으로 나누어지기도 한다. 생식엽편은 선형으로 단순 또는 1 또는 2번 아래에서 분지하고, 포자낭은 다육질의 생식엽편에 파묻힌다--<span style="color: red; font-size: 18px; font-weight: bold;">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">제주고사리삼속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></p>
+<p class="indent-1">1. 영앙엽편은 대부분 단순하지만 드물게 결각상으로 나누어지기도 하며 엽맥은 망상맥이다 -- (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="species-name">나도고사리삼속</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+
+
+
+</td></tr>
+</table>
+<p class="comment">출처 : 생태환경 이용 및 관리기술-한반도 관속식물 분류군 검색표,2011, 환경부</p>
+
+ </body>
+</html>
