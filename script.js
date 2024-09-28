@@ -104,18 +104,18 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
 
-function toggleDFVisibility() {
-  var checkBox = document.getElementById("toggleDF");
-  var dfElements = document.querySelectorAll(".df");
+			function toggleDFVisibility(checkBox) {
+			 // var checkBox = document.getElementById("toggleDF");
+			  var dfElements = document.querySelectorAll(".df");
 
-  dfElements.forEach(function(dfElement) {
-    if (checkBox.checked) {
-      dfElement.style.display = "block";  // Show the elements
-    } else {
-      dfElement.style.display = "none";  // Hide the elements
-    }
-  });
-}
+			  dfElements.forEach(function(dfElement) {
+				if (checkBox.checked) {
+				  dfElement.style.display = "block";  // Show the elements
+				} else {
+				  dfElement.style.display = "none";  // Hide the elements
+				}
+			  });
+			}
 
 
 

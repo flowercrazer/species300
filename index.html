@@ -6,6 +6,7 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>생물분류기사(식물)300종</title>
     <!-- 외부 CSS 파일 연결 -->
 <link href="style.css" rel="stylesheet" type="text/css">
@@ -16,22 +17,39 @@
  </head>
  <body>
  <div class="header-container">
-  
-	  <h1 class="title"><생물분류기사(식물) 실기시험 출제예상 300종></h1>
+  		   <h2 class="title">생물분류기사(식물) 실기시험 출제예상 300종</h2>
+	 
+	      <div class="controls">
+
+		   <div class="blank">
+		   
+		   </div>
+			<div class="IDKey-control">
+			   과명&nbsp;
+				<input type="checkbox" id="subjectCheckbox"   class="toggle-button" onclick="toggleFamilyText()">
+				<label for="subjectCheckbox" class="toggle-label"> </label>
+				대표국명&nbsp;
+				<input type="checkbox" id="subjectCheckboxS"  class="toggle-button" onclick="toggleSpeciesLinks()">
+				<label for="subjectCheckboxS" class="toggle-label"> </label>
+				검색표&nbsp;
+				 <input type="checkbox" id="toggleDF"  class="toggle-button" onclick="toggleDFVisibility(this)" >
+				 <label for="toggleDF" class="toggle-label"> </label>
+			</div>
 
 		  <div class="size-control">
-			<label for="imageSizeSlider">이미지 조절: </label>
+			<label for="imageSizeSlider">이미지 </label>
 				  <input type="range" id="imageSizeSlider" min="100" max="800" value="150" step="10" oninput="resizeAllImages(this.value)">
 				  <span id="sizeDisplay">150</span>px
 		</div>
 
 		<div class="scroll-control">
-			<label for="speedSlider">속도 조절: </label>
+			<label for="speedSlider">속도</label>
 			<input type="range" id="speedSlider" min="1" max="100" value="1" step="1" oninput="updateSpeed(this.value)">
-			<span id="speedValue">1</span> 픽셀/초
+			<span id="speedValue">1</span> 픽셀/초 &nbsp;
 			<button id="pauseButton" onclick="toggleScroll()">진행시켜</button>
 			<button onclick="restartScroll()">처음부터</button>
 		</div>
+	</div>
 
 </div>
 <p class="copyright">
@@ -107,15 +125,11 @@
 	</table>
 <table>																								
 <tr>
-	<td width="10">no</td><td width="100" align="center">	과명	<br><label><input type="checkbox" id="subjectCheckbox" onclick="toggleFamilyText()">보이기</label></td>
-	<td width="90">대표국명	<br><label><input type="checkbox" id="subjectCheckboxS" onclick="toggleSpeciesLinks()">보이기</label>	</td>
+	<td width="10">no</td><td width="100" align="center">	과명</td>
+	<td width="90">대표국명	</td>
 	<td width="10" align="center">	멸위	</td>
 	<td align="center">	
-	
-	 <label>
-            <input type="checkbox" id="toggleDF" onclick="toggleDFVisibility()" >
-            검색표 보이기
-        </label>
+동정자료
 	</td>
 </tr>
 	
@@ -128,7 +142,7 @@
 </td>
 	<td align="center">		</td>
 	<td align="left">
-	<div class="df" id="idKey" style="display: block;">
+	<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">6. Pinus L. 소나무속</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 잎의 유관속은 2개이며 인엽과 아린은 오래 달려서 침엽과 함께 떨어진다.</p>
@@ -184,7 +198,7 @@
 <a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000059968"target="_300">	리기다소나무</a>
 </td><td align="center">		</td>
 <td>	
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <p class="indent-1">1. 잎의 유관속은 2개이며 인엽과 아린은 오래 달려서 침엽과 함께 떨어진다.</p>
     <p class="indent-2">2. 잎은 3개가 속생한다.</p>
     <p class="indent-7"><span style="background-color: yellow;">7. 잎의 길이는 15 cm 미만이며, 원즐기에 맹아가 많이 발달한다. 암솔방울은 오래 달려 있다 -- 리기다소나무</span></p>
@@ -209,7 +223,7 @@
 <a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000059963"target="_300">	소나무</a>
 </td><td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <p class="indent-1">1. 잎의 유관속은 2개이며 인엽과 아린은 오래 달려서 침엽과 함께 떨어진다.</p>
     <p class="indent-2">2. 잎은 2개가 속생한다.</p>
     <p class="indent-3">3. 수피는 적갈색으로 2년지부터 불규칙하게 벗겨진다.</p>
@@ -236,7 +250,7 @@
 <a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000059964"target="_300">	잣나무</a>
 </td><td align="center">		</td>
 	<td>
-	<div class="df" id="idKey" style="display: block;">
+	<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">1. 잎의 유관속은 1개 이며, 인엽과 아린은 침엽보다 먼저 떨어진다.</p>
     <p class="indent-2">9. 잎은 5개가 속생한다.</p>
     <p class="indent-3">10. 암솔방울은 억어도 벌어지지 않으며 종자는 날개가 없다.</p>
@@ -260,7 +274,7 @@
 <a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000059947"target="_300">	구상나무</a>
 </td><td align="center">		</td>
 <td>	
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 수피는 희백색으로 평활하며, 암솔방울의 길이는 5 cm 미만이다.</p>
     <p class="indent-2">3. 잎은 선상 도피침형이며, 포는 곧게 벋는다 <i>A. koreana</i> 구상나무</p>
 	</div>
@@ -280,7 +294,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <p class="indent-1">1. 가지는 긴 가지 한 종류이며, 잎은 단생으로 나선상 배열을 한다.</p>
     <p class="indent-2">2. 소지와 가지는 평활하며, 엽침이 없다-- 1. <i>Abies</i> 전나무속</p>
 	<br/>
@@ -303,7 +317,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 잎은 연하고, 부드러우며, 엽선은 급첨두이다. 암솔방울은 성숙하면 장과처럼 보이고 종자의 일부분만 두꺼운 종의로 둘러싸인다-- 1. <i>Taxus</i> 주목속</p>
 </div>
 
@@ -346,7 +360,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 잎은 둔두이며, 뒷면 기공선은 희고 좁은 띠모양으로 Y자 형이며, 암솔방울은 폭이 10~15 mm, 종자는 둥근 공 모양이다-- 1. <i>C. obtusa</i> 편백</p>
 </div>
 
@@ -367,7 +381,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <p class="indent-1">1. 잎은 1종류로 침상이며, 3윤생하고, 기부에 관절이 있으며, 솔방울은 액생한다.</p>
     <p class="indent-2">2. 잎은 곧고, 앞면에 깊은 홈이 있으며, 단면은 U자 형으로 길이는 1 cm 이상이다-- 1. <i>J. rigida</i></p>
     <p class="indent-3"><span style="background-color: yellow;">2a. 관목 또는 교목으로 식물체는 곧게 선다.--- la. var. rigida 노간주나무</span></p>
@@ -389,7 +403,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 잎은 2회 우상복엽이다-- 1. <i>으. japonica</i> 고비</p>
 </div>
 
@@ -408,7 +422,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 잎은 1회 우상복엽-우열이다.</p>
     <p class="indent-2">2. 포자엽 전체에 포자낭이 달리며, 포자엽에는 녹색의 엽육이 전혀 발달하지 않는다.-- 2. <i>0. cinnamomea</i> 꿩 고비</p>
 </div>
@@ -432,7 +446,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
  <p class="indent-1">1. 지하경은 옆으로 기고, 지하에 포복경이 없으며, 엽병은 앞면이 다소 편평하고, 영양엽과 포자엽은 하부를 향하여 좁아지지 않는다.</p>
     <p class="indent-2">2. 영양엽의 우편은 전연 또는 파상연이고, 엽맥은 유리소맥이 없는 망상맥이며, 포자엽은 2회 우상복엽으로 소우편은 구슬모양이다.-- 1. <i>Onoclea</i> 야산고비속</p>
 	</div>
@@ -453,7 +467,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 중축, 우축 및 소우축의 뒷면에 인편이 있는 경우, 인편의 기부는 편평하고 주머니처럼 부풀지 않는다.</p>
     <p class="indent-2">2. 엽신은 대부분 좁은 피침형에서부터 넓은 피침형, 도피침형, 장타원형, 타원상 장타원형 또는 난상 장타원형이고, 1회 우상복엽-천열에서부터 2회 우상복엽-중열이다.</p>
     <p class="indent-3">6. 엽신은 대부분 1회 우상복엽-심열에서부터 2회 우상복엽까지이며, 드물게 3회 우상복엽이다.</p>
@@ -481,7 +495,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <p class="indent-1">1. 포막은 함입부가 없는 둥근 방패형이다.</p>
     <p class="indent-2">2. 엽맥은 유리맥이다.-- 2. <i>Polystichum</i> 십자고사리속</p>
     
@@ -538,7 +552,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 포막의 가장자리는 전연 또는 불규칙한 치아상이다.</p>
     <p class="indent-2">5. 지하경은 비스듬하거나 곧게 서며, 잎은 모여 난다.</p>
     <p class="indent-3">6. 엽신은 하부를 향하여 거의 좁아지지 않는다.</p>
@@ -565,7 +579,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <p class="indent-1">1. 잎은 단엽으로 전연 또는 파상거치가 있다.</p>
     <p class="indent-2">2. 잎의 기부는 점차로 좁아지는 쐐기형이고, 엽맥은 망상맥이며, 인접한 소맥에서의 포자낭군은 서로 등지고 있다.</p>
     <p class="indent-3">3. 잎 끝은 길게 신장하고, 무성아가 달린다. 엽맥은 1--4개의 망극으로 구성된 망상맥이다.-- 3. <i>A. ruprechtii</i> </p>
@@ -586,7 +600,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <p class="indent-1">1. 잎은 우상복엽이다.</p>
     <p class="indent-2">5. 엽신은 1회 우상복엽으로 가장자리는 거의 전연, 치아상거치 또는 둔거치이다.</p>
     <p class="indent-3">13. 최종열편은 선형이 아니고, 가장자리에 치아상거치가 있으며, 맥과 포자낭군이 여러 개 있다.</p>
@@ -626,7 +640,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">1. 털이 없거나 있어도 별 모양이 아니다.</p>
     <p class="indent-2">2. 엽신은 단엽으로 전연 또는 전연에 가까우며, 적어도 결각이 지거나 분열하지는 않는다.</p>
     <p class="indent-3">3. 포자낭군은 원형, 타원형 또는 장타원형이다.</p>
@@ -652,7 +666,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">1. 별 모양의 털이 있다. - <i>Pyrrosia</i> 석위속</p>
  
     <p class="indent-1">1. 잎은 단엽으로 전연이다.</p>
@@ -676,7 +690,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <p class="indent-1">1. 별 모양의 털이 있다. - <i>Pyrrosia</i> 석위속</p>
     
     <p class="indent-1">1. 잎은 단엽으로 전연이다.</p>
@@ -731,7 +745,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
  <p class="indent-1">1. 식물체는 무성아를 가져 영양번식을 하며, 땅에 자란다.</p>
     <p class="indent-2">2. 소엽의 가장자리는 중부 이상에서 불규칙한 예거치 또는 미세한 치아상거지가 있다.</p>
     <p class="indent-3">3. 소엽은 좁은 타원형으로 가장자리에 불규칙한 예거치가 있으며, 중부에서 기부를 향하여 좁아진다 - <i>H. serrata</i></p>
@@ -751,7 +765,7 @@
 <a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000059579"target="_300">	속새</a>
 </td><td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
  <p class="indent-1">1. 지상경은 다년생으로 기공은 묻혀있고, 한 줄로 배열되며, 포자낭수의 선단은 뾰쪽하다.</p>
     <p class="indent-2">6. 줄기는 가지가 갈리지 않는다 - <i>E. hyemale</i></p>
 	</div>
@@ -770,7 +784,7 @@
 <a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000059577"target="_300">	쇠뜨기</a>
 </td><td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
  <p class="indent-1">1. 지상경은 일년생으로 기공은 표면에 있고, 흩어져 있거나 띠로 배열되며, 포자낭수의 선단은 둥글다.</p>
     <p class="indent-2">2. 줄기는 두 종류이며, 영양경은 녹색으로 생육기간 중에 살아 있으며, 생식경은 갈색으로 포자방출 전까지는 광합성을 하지 못한다.</p>
     <p class="indent-3">3. 생식 경은 포자 방출 후 말라 없어진다 - <i>E. arvense</i></p>
@@ -787,7 +801,7 @@
 <a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000516994"target="_300">	제주고사리삼</a>
 </td><td align="center" bgcolor="red">	Ⅰ	</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
  <p class="indent-1">1. 영양엽편은 우상 또는 세 갈래로 나누어지며, 엽맥은 개방 차상맥이다.</p>
     <p class="indent-2">2. 지하경은 곧게 서며, 영양엽편과 생식엽편은 우상으로 나누어지고 포자낭은 나출된다 - <i>Botrychium</i> 고사리삼속</p>
     <p class="indent-2"><span style="background-color: yellow;">2. 지하경은 수평으로 기고, 영양엽편은 세 갈래지며, 각 열편은 다시 두 부분으로 나누어지기도 한다. 생식엽편은 선형으로 단순 또는 1 또는 2번 아래에서 분지하고, 포자낭은 다육질의 생식엽편에 파묻힌다 - <i>Mankyua</i> 제주고사리삼속</span></p>
@@ -824,7 +838,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
   <p class="indent-1">1. 소엽은 7~17 장이고, 예거치가 있으며, 하면에 털이 있다. 암꽃은 4~10 개이다. 열매에는 털이 밀생하며, 견과는 타원형 또는 심장형이고, 기부는 2 실이며, 표면은 두드러진 능각이 있거나 매끈하다.</p>
     <p class="indent-2">2. 견과는 타원형이며, 표면에는 두드러진 능각이 있다 - <i>J. mandshurica</i></p>
 </div>
@@ -843,7 +857,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
  <p class="indent-1">1. 잎은 복엽이다. 열매는 녹황색 또는 적색이다.</p>
     <p class="indent-2">3. 직립하는 초본이다. 잎은 전연이다. 열매는 암자색, 흑색 또는 황색이다.</p>
     <p class="indent-3">5. 열매는 구형이며, 지름 1.5 cm 미만이다.</p>
@@ -865,7 +879,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
  <p class="indent-1">1. 잎은 육질, 신장형, 둔두 내지 원두, 깊은 심장저이다 - <i>C. soldanella</i></p>
  </div>
 
@@ -884,7 +898,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 줄기는 지름 0.5--2 mm로 비교적 굵다. 꽃은 수상화서를 이룬다. 악은 기부까지 갈리며, 화주는 1개이다 - <i>C. japonica</i></p>
 </div>
 
@@ -903,7 +917,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 잎은 부유성이며, 단엽, 심장형이다. 꽃은 엽액에 단생 또는 속생한다- Nymphoides 어리 연 꽃속</p>
 <p class="indent-1">1. 잎에는 둔거치가 있다. 꽃은 황색이다 -N. peltata</p>
 </div>
@@ -923,7 +937,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 동아에는 아린이 있다. 잎은 호생 또는 아대생한다. 꽃은 단성, 4 수성이며, 단생하거나 여러 개가 속생한다. 종자는 배면에 홈이 있다.</p>
 <p class="indent-2">2. 잎은 대생 또는 아대생한다.</p>
 <p class="indent-3">3. 엽병은 길이 1.5~3 cm 이다.</p>
@@ -945,7 +959,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">139. VITACEAE Juss. 포도과</p>
 <p class="indent-1">＜속 검색표＞</p>
 <p class="indent-1">1. 수피에는 피목이 없고, 곧 세로로 갈라지며, 수는 갈색이다. 화서는 원추화서이다. 화판은 상단부에서 합생하고, 신장하지 않으며, 개화기에 뚜껑처럼 떨어진다 -- 1. vitis 포도족</p>
@@ -975,7 +989,7 @@
 <a href="https://species.nibr.go.kr/home/mainHome.do?cont_link=009&subMenu=009002&contCd=009002&ktsn=120000061451"target="_300">	고욤나무</a>
 </td><td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1"><span style="background-color: yellow;">1. 어린 소지에는 회색 털이 있다. 잎 상면은 광택이 있으며, 하면은 흔히 백색이다. 화관 열편의 바깥면은 무모이다. 열매는 지름 1.5--2 cm 이다 - p. lotus</span></p>
 <p class="indent-1">1.	어린 소지에는 갈색 연모가 있다. 잎 상면은 거의 광택이 없으며, 하면은 연녹색이다. 화관 열편의 바깥면에는 털이 있다. 열매는 지름 4 ~ 8 cm 이다 --2. p. kaki 감나무</p>
 </div>
@@ -996,7 +1010,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 잎은 조락한다. 화서는 정생하고, 원추화서이다.</p>
 <p class="indent-2">2. 수피는 세로로 갈라지거나 종잇장처럼 벗겨진다. 잎은 도란형, 타원형, 장타원형 또는 난형이며, 하면은 연한 녹색이나 분백색은 아니다. 핵과는 성숙시 청색 또는 흑청색이다.</p>
 <p class="indent-3"><span style="background-color: yellow;">3. 잎은 도란형 내지 타원형이며, 엽선은 예두 내지 점첨두이고, 가장자리에는 소 예거치가 있다. 원추화서에는 소수의 작은 잎이 달린다. 핵과는 청색이다 - S. sawafutagi</span></p>
@@ -1018,7 +1032,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 잎 가장자리에는 얕은 예거치 또는 치아상 거치가 있다. 소포는 없다. 판연은 판통보다 길다.</p>
 <p class="indent-2"><span style="background-color: yellow;">2. 잎은 난형 또는 타원형, 길이 3—10 cm 이며, 하면에 성상모가 산생한다. 소화경은 길이 2--3 cm 이다 - S. japonicus 때죽나무</span></p>
 </div>
@@ -1042,7 +1056,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">1. 잎 가장자리에는 얕은 예거치 또는 치아상 거치가 있다. 소포는 없다. 판연은 판통보다 길다.</p>
 	<p class="indent-2"><span style="background-color: yellow;">2. 잎은 넓은 도란형 또는 원형, 길이 10 — 20 cm 이며, 하면에 성상모가 밀생한다. 소화경은 길이 0.5--1 cm 이다 - S. obassia 쪽동백나무</span></p>
 </div>
@@ -1066,7 +1080,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">2 . Myriophyllum L. 물수세 미 속 </p>
 <p class="indent-1">＜종 검색표＞ </p>
 <p class="indent-1">1. 꽃은 영액에 단생한다 -- 1. M. verticil latum 물수세미 </p>
@@ -1091,7 +1105,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 아관목이다. 두화는 측생한다. 수과에는 부리가 없다 - C. lanceolatum 긴 갯고들빼기</p>
 
 <p class="indent-1">1. 초본이다. 두화는 측생 및 정생한다. 수과의 부리는 짧고, 단단하다.</p>
@@ -1116,7 +1130,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 두화는 여러 개이다.</p>
 <p class="indent-2">2. 잎은 갈리지 않는다. 두화는 총상화서로 배열된다.</p>
 <p class="indent-3">3. 화서 및 화경에 포가 있다.</p>
@@ -1138,7 +1152,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 잎은 길이 6~13 cm, 신장상 심장형 또는 원형, 장상으로 7 ~ 11 갈래로 갈린다- A. acerifolia</p>
 <p class="indent-2"><span style="background-color: yellow;">1. 잎은 천열(잎 가장자리에서 주맥까지 거리의 1/5--2/5정도 결각함) 한다-a. var. acerifolia 단풍취</span></p>
 <p class="indent-2">1. 잎은 약간 천열(잎 가장자리에서 주맥까지 거리의 1/5 이하로 결각함)한다-b. var. subapoda 가야단풍취</p>
@@ -1158,7 +1172,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 관모가 있다.</p>
 <p class="indent-2">2. 관모는 반상화와 방사화에서 같은 형태이다.</p>
 <p class="indent-3">4. 관모는 길이 2 mm 이상이다.</p>
@@ -1184,7 +1198,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 수과는 도란상 쐐기형이며, 정단부는 평두이다.</p>
 <p class="indent-2">2. 통상화관은 4개의 거치가 있다. 수과는 편평하고, 까락은 대개 2개 또는 드물게 3 또는 4개이다.</p>
 <p class="indent-3"><span style="background-color: yellow;">3. 줄기 중부에 달리는 잎은 우상복엽이다. 두화는 방사화형이다 - B. frondosa</span></p>
@@ -1204,7 +1218,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 화탁에는 (최소한 가장자리 부분에) 화탁포가 있다.</p>
 <p class="indent-2">3. 두화는 단성화로 구성된다.</p>
 <p class="indent-3">4. 자성 두화의 총포에는 혹 또는 곧은 엽침이 1 또는 여러 열로 있으며, 웅성 두화의 총포편은 유합한다 - Ambrosia </p>
@@ -1226,7 +1240,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 총포는 대개 암록색이다.</p>
 <p class="indent-2"><span style="background-color: yellow;">2. 잎 하면과 가장자리에 털이 없다. 외총포편은 대개 옆으로 펼쳐지며, 넓은 도피침형 내지 선상 피침형이며, 뿔 모양의 부속체는 없다 - T. officinale 서양민들레</span></p>
 <p class="indent-2">2. 잎 하면과 가장자리에 털이 산재한다. 외총포편은 대개 직립하며, 난형 내지 넓은 피침형이며, 작은 뿔 모양의 부속체가 있다 - T. platypecidum 흰털민들레</p>
@@ -1253,7 +1267,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">54. Dendranthema (DC.) Des Moul. 산국속 (국화속)</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 두화는 20 개보다 많으며, 산방상 또는 위산방상이며, 지름 1.2 ~ 4 cm 이다.</p>
@@ -1292,7 +1306,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">Aster L. 참취속 (쑥부쟁이속)</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 관모가 없다 ------ 1. A. koraiensis 벌개미취</p>
@@ -1345,7 +1359,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 두화는 20 개보다 많으며, 산방상 또는 위산방상이며, 지름 1.2 ~ 4 cm 이다.</p>
 <p class="indent-2"><span style="background-color: yellow;">2. 두화는 지름 1.2 ~ 2 cm, 위산방상이다. 총포는 구형, 너비 8 mm 정도이다 -- 1. P. boreale 산국  </span></p>
 <a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063862/BIMGVP0000004747.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000063862/thumb500/BIMGVP0000004747.jpg" height="150"></a>
@@ -1363,7 +1377,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">51. Artemisia L. 쑥속</p>
 <p class="indent-1">1. 반상화는 양성 및 염성이다.</p>
 <p class="indent-2">5. 일년생, 이년생, 다년생 초본이다.</p>
@@ -1389,7 +1403,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">32. Cirsium Mill. 엉겅퀴속</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 내총포편의 정단은 능형, 부풀어 있고, 가장자리는 거친 예거치이다. 수과는 2 가지 색을 띤다.</p>
@@ -1422,7 +1436,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">69. Syneilesis Maxim. 우산나물속</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 잎의 열편은 너비 4 ~ 8 mm 이다. 두화는 산방상으로 배열된다 -- 1. S. aconitifolia 애기우산나물</p>
@@ -1445,7 +1459,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">Helianthus L. 해바라기속</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1"><span style="background-color: yellow;">1. 다년생으로 근경 또는 괴경이 있다 ---- 1. H. tuberosus </span></p>
@@ -1468,7 +1482,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. 동아는 난형이며, 엽병이 변한 아린은 작고, 동아 밑에 짧게 발달한다. 잎은 길이 15~20 cm 이며, 측맥은 잎 하면에서 거의 돌출하지 않고, 측맥간 거리는 다소 멀다. 악편은 없거나 1 또는 2 장이며, 확실히 구분된다. 암꽃에는 헛수술이 잘 발달하며, 헛수술에는 간혹 퇴화된 약이 있다 -- D. macropodum </p>
 </div>
 <a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060424/BIMGVP0000005403.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000060424/thumb500/BIMGVP0000005403.jpg" height="150"></a>
@@ -1489,7 +1503,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">9. Rubia L. 꼭두선이속</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 줄기는 덩굴성이며, 밑을 향한 짧은 가시가 있다.</p>
@@ -1523,7 +1537,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">180. LINNAEACEAE Backlund 린네풀과 (신칭)</p>
 	<p class="indent-1">＜속 검색표＞</p>
 	<p class="indent-1">1. 상록성 반관목으로 땅 위를 긴다. 줄기는 원통형이며, 수피는 갈라지고 벗겨진다. 목부는 산공재로 복합방사조직은 없다. 소지의 마디는 원주형이다. 별도의 소포가 있다. 꽃은 좌우상칭이다. 악편은 결실 후에 탈락하며, 화관은 종상 깔대기형이다 -- 1. Linnaea 린네풀속</p>
@@ -1550,7 +1564,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">11. Prunella L. 꿀플속</p>
 	<p class="indent-1">＜종 검색표＞</p>
 	<p class="indent-1">1. 식물체는 연약하고, 포복경이 없다. 화관은 악에서 다소 돌줄하고, 길이 1.5 cm 미만이다 ------ 1. P. vulgaris 두메꿀풀</p>
@@ -1602,7 +1616,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">Clerodendrum L. 누리장나무속</p>
 	<p class="indent-1">Clerodendrum trichotomum Thunb.</p>
 	<p class="indent-1">＜종하위 검색표＞</p>
@@ -1627,7 +1641,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">1. 초본이다.</p>
 	<p class="indent-2">2. 자방은 갈래지며, 화주는 자방에 기생(자방의 갈린 조각들 사이에 합착)한다.</p>
 	<p class="indent-3">3. 소견과는 매끈하거나 짧은 털 또는 혹같은 돌기가 있다.</p>
@@ -1676,7 +1690,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 식물체는 낙엽성이다 -- 1. I. macropoda 대펫집나무</p>
 <p class="indent-1">1. 식물체는 상록성이다.</p>
@@ -1702,7 +1716,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">＜속 검색표＞</p>
 <p class="indent-1">1. 관목, 드물게 덩굴성이다. 잎은 대생한다 -- 1. Euonymus 화살나무속</p>
 <p class="indent-1">1. 덩굴성 목본식물이다. 잎은 호생한다.</p>
@@ -1801,7 +1815,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">42. LAURACEAE Juss. 녹나무과</p>
 <p class="indent-1">＜속 검색표＞</p>
 <p class="indent-1">1. 꽃은 단성(식물체는 자웅이주)이다. 화서는 산형화서이며, 총포가 달린다.</p>
@@ -1845,7 +1859,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">132. SANTALACEAE R. Br. 단향과</p>
 <p class="indent-1">＜속 검색표＞</p>
 <p class="indent-1">1. 초본이다. 잎은 호생하며, 선형이다. 꽃은 양성이며, 화피편은 5장이다. 열매는 견과와 같다 -- 1. Thesium 제비꿀속</p>
@@ -1898,7 +1912,7 @@
 <td align="center">		</td>
 <td>
 
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">8. Euphorbia L. 대극속</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 잎은 대생하고, 기부는 비대칭이며, 예거치가 있다. 총포의 선체에는 화판상 부속체가 있다. 종자는 각이 진다.</p>
@@ -1957,7 +1971,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">136. BUXACEAE Dumort. 회양목과</p>
 <p class="indent-1">＜속 검색표＞</p>
 <p class="indent-1">1. 포복성 아관목이다. 잎은 호생하며, 치아상거치가 있다. 화서는 수상화서이다 --- 1. Pachysandra 수호초속</p>
@@ -1988,7 +2002,7 @@
 <td align="center">		</td>
 <td>
 
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">126. TRAPACEAE Dumort. 마름과</p>
 <p class="indent-1">1. Trapa L. 마름속</p>
 <p class="indent-1">＜종 검색표＞</p>
@@ -2023,7 +2037,7 @@
 <td align="center">		</td>
 <td>
 
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">128. ONAGRACEAE Juss. 바늘꽃과</p>
 <p class="indent-1">＜속 검색표＞</p>
 <p class="indent-1">1. 꽃은 2 수성이다. 삭과는 열개하지 않고, 굽은 털이 있다. 종자는 열매당 1 또는 2 개이다 --- 1. Circaea 털이슬속</p>
@@ -2060,7 +2074,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">3. Epilobium L. 바늘꽃속</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 꽃은 길이 1--2.3 cm 이다. 주두는 4 갈래로 갈린다 ᅳ- 1. E. hirsutum 큰바늘꽃</p>
@@ -2091,7 +2105,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 
 <p class="indent-1">124. LYTHRACEAE J. St.-Hil. 부처꽃과</p>
 <p class="indent-1">＜속 검색표＞</p>
@@ -2125,7 +2139,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. Daphne L. 팥꽃나무속</p>
 <p class="indent-1">＜종 검색표＞</p>
 <p class="indent-1">1. 잎은 대생한다 ------ -- 1. D. genkwa 팥꽃나무</p>
@@ -2166,7 +2180,7 @@
 </td>
 <td align="center" bgcolor="green">	Ⅱ	</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 
 <p class="indent-1">84. PAEONIACEAE Raf. 작약과</p>
 <p class="indent-1">1. Paeonia L. 작약속 ＜종 검색표＞</p>
@@ -2193,7 +2207,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 
 <p class="indent-1">82. POLYGONACEAE Juss. 마디풀과</p>
 <p class="indent-1">＜속 검색표＞</p>
@@ -2254,7 +2268,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-0">2. Polygonum L. 마디풀속</p>
 <p class="indent-0">＜종 검색표＞</p>
 <p class="indent-1">1. 줄기와 엽병에는 능선을 따라 아래로 굽은 목질화된 가시가 산생 내지 밀생한다.</p>
@@ -2401,7 +2415,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 
 <p class="indent-1">5. Rumex L. 소리쟁이속</p>
 <p class="indent-1">＜종 검색표＞</p>
@@ -2458,7 +2472,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">41. MACTJOLIACEAE Juss. 목련과</p>
 	<p class="indent-1">＜속 검색표＞</p>
 	<p class="indent-1">1. 꽃은 정생하며, 화아는 짧은 가지에 정생한다---- - 1. Magnolia 목련속</p>
@@ -2485,7 +2499,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 
 <p class="indent-1">142. STAPHYLEACEAE Martinov 고추나무과</p>
 <p class="indent-1">＜속 검색표＞</p>
@@ -2508,7 +2522,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">145. ACERACEAE Juss. 단풍나무과</p>
 <p class="indent-2">1. Acer L. 단풍나무속</p>
 <p class="indent-2">＜종 검색표＞</p>
@@ -2613,7 +2627,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">143. SAPINDACEAE Juss. 무환자나무과</p>
 <p class="indent-2">＜속 검색표＞</p>
 <p class="indent-1">1. 초본성 덩굴식물로 덩굴손이 있다 --- 1. Cardiospermum 풍선덩굴속</p>
@@ -2638,7 +2652,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">147. SIMAROUBACEAE DC. 소태나무과</p>
 <p class="indent-2">＜속 검색표＞</p>
 <p class="indent-1">1. 탁엽이 있으며, 소엽에는 예거치가 있다. 화서는 액생하는 취산 또는 산방화서이다. 열매는 소핵과이다 ---- 1. Picrasma 소태나무속</p>
@@ -2660,7 +2674,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">146. ANACARDIACEAE R. Br. 옻나무과</p>
 <p class="indent-2">＜속 검색표＞</p>
 <p class="indent-1">1. 식물체는 피부에 과민반응을 일으키지 않는다. 화서는 정생하는 원추화서이다. 열매는 적색이고, 선모가 있으며, 열매는 성숙시 외과피와 중과피가 융합한다 ---- Rhus 붉나무속</p>
@@ -2711,7 +2725,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. Zanthoxylum L. 초피 나무속</p>
 <p class="indent-2">＜종 검색표＞</p>
 <p class="indent-1">1. 화판은 없고, 수술은 악편과 호생하며, 심피는 길이의 2/3 정도 합생한다.</p>
@@ -2742,7 +2756,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">155. ARALIACEAE Juss. 두릅나무과</p>
 <p class="indent-2">＜속 검색표＞</p>
 <p class="indent-1">1. 소화경은 꽃 밑에 마디가 있다. 화판은 봉오리일 때 약간 복와상이다.</p>
@@ -2786,7 +2800,7 @@
 </td>
 <td align="center" bgcolor="green">	Ⅱ	</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">Eleutherococcus Maxim. 오갈피나무속</p>
 <p class="indent-2">＜종 검색표＞</p>
 <p class="indent-1">1. 심피는 5개이다.</p>
@@ -2817,7 +2831,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">Kalopanax Miq. 음나무속</p>
 <p class="indent-2">Kalopanax septemlobus (Thunb.) Koidz.</p>
 <p class="indent-2">＜종하위 검색표＞</p>
@@ -2843,7 +2857,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">Angelica L. (당귀 속)</p>
 <p class="indent-1">종 검색표</p>
 
@@ -2892,7 +2906,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 </div>
 <span style="background-color: yellow;">
 <a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062676/BIMGVP0000005317.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062676/thumb500/BIMGVP0000005317.jpg" height="150"></a>
@@ -2910,7 +2924,7 @@
 </td>
 <td align="center" bgcolor="green">	Ⅱ	</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">156. APIACEAE Lindl. (UMBELLIFERAE Juss., nom. alt.) 미나리과</p>
 <p class="indent-1">속 검색표</p>
 
@@ -3009,7 +3023,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">8. Torilis Adans. (사상자속)</p>
 <p class="indent-1">종 검색표</p>
 <p class="indent-1"><span style="background-color: yellow;">1. 총포는 여러 장이다. 꽃은 양성 또는 웅성이며, 화판에는 강모가 있다. 열매는 난형이다 -- 1. T. japonica (사상자)</span></p>
@@ -3032,7 +3046,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 </div>
 <span style="background-color: yellow;">
 <a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062731/BIMGVP0000005239.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000062731/thumb500/BIMGVP0000005239.jpg" height="150"></a>
@@ -3050,7 +3064,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. Berberis L. (매자나무속)</p>
 <p class="indent-1">[종 검색표]</p>
 <p class="indent-1">1. 소엽은 전연이다 ------ 3. B. poiretii (당매자나무)</p>
@@ -3078,7 +3092,7 @@
 <td align="center">		</td>
 <td>
 
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 
 <p class="indent-1">1. Thalictrum L. (꿩의다리속)</p>
 <p class="indent-1">종 검색표</p>
@@ -3123,7 +3137,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 	<p class="indent-1">12. Hepatica Mill. (노루귀속)</p>
 	<p class="indent-1">종 검색표</p>
 	<p class="indent-1">1. 잎은 이년생이며, 상면은 무모이다. 암술과 수과는 무모이다 ----- 3. H. maxima (섬노루귀)</p>
@@ -3147,7 +3161,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. Caltha L. (동의나물속)</p>
 <p class="indent-1">종 검색표</p>
 <p class="indent-1"><span style="background-color: yellow;">1. 줄기는 직립하거나 자라면서 옆으로 누우며, 대개 마디에서 뿌리를 내지 않는다. 꽃은 지름 2 ~ 5 cm, 암술(골돌)은 대개 10~20 개이다 --- 1. C. palustris var. palustris (동의 나물)</span></p>
@@ -3170,7 +3184,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. Ranunculus L. (미나리아재비속)</p>
 <p class="indent-1">[종 검색표]</p>
 <p class="indent-1">1.수생식물이다. 물속에 잠겨 자라는 잎은 가늘게 갈린다. 꽃은 백색이다 --- 1. R. trichophyllus var. kadzusensis (매화마름)</p>
@@ -3215,7 +3229,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. Anemone L. (바람꽃속)</p>
 <p class="indent-1">종 검색표</p>
 <p class="indent-1">1. 악편은 10--30 장이다.</p>
@@ -3261,7 +3275,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. Adonis L. (복수초속)</p>
 <p class="indent-1">종 검색표</p>
 <p class="indent-1">1. 잎 열편의 선단은 점첨두이다. 악편은 녹색, 수과는 구형이다 ---- 3. A. multiflora (세복수초)</p>
@@ -3286,7 +3300,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">15. Clematis L. (으아리 속)</p>
 <p class="indent-1">종 검색표</p>
 <p class="indent-1">1. 꽃은 종 모양 내지 항아리 모양이며, 밑을 향해 1 개씩 달린다 (C. heracleifolia는 예외). 악편은 곧추서며, 선단부는 대개 뒤로 젖혀진다. 수술에는 털이 밀생한다.</p>
@@ -3365,7 +3379,7 @@
 </td>
 <td align="center" bgcolor="green">	Ⅱ	</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">7. Aconitum L. (초오속)</p>
 <p class="indent-1">종 검색표</p>
 
@@ -3461,7 +3475,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">56. MENISPERMACEAE Juss. 새모래덩굴과</p>
 <p class="indent-1">＜속 검색표＞</p>
 
@@ -3491,7 +3505,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">55. LARDIZABALACEAE R. Br. 으름덩굴과</p>
 <p class="indent-1">＜속 검색표＞</p>
 
@@ -3516,7 +3530,7 @@
 <td align="center">		</td>
 <td>
 
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">1. <i>Salix</i> L. (버드나무속)</p>
 <p class="indent-1">＜종 검색표＞</p>
 
@@ -3644,7 +3658,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">93. DROSERACEAE Salisb. (끈끈이귀개과)</p>
 <p class="indent-1">＜속 검색표＞</p>
 
@@ -3676,7 +3690,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <p class="indent-1">48. SCHISANDRACEAE Blume (오미자과)</p>
 <p class="indent-1">＜속 검색표＞</p>
 <p class="indent-1">1. 합생화탁은 도란형, 곤봉형 또는 타원체형이며, 결실기에 신장된다. 성숙한 암술은 구형 또는 타원체형의 집합체 또는 두상체를 이룬다 --- 1. <i>Kadsura</i> (남오미자속)<br>
@@ -3706,7 +3720,7 @@
 <td align="center">		</td>
 <td>
 
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
 <h1>VALERIANACEAE Batsch (마타리과)</h1>
 <h2>속 검색표</h2>
 
@@ -3740,7 +3754,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <h1>DIERVILLACEAE Pyck (병꽃나무과)</h1>
 	<h2><i>Weigela</i> Thunb. (병꽃나무속) 종 검색표</h2>
     <p class="indent-1">1. 악은 기부까지 5 갈래로 깊게 갈라지며, 악편은 동일하고, 선형이다. 꽃은 처음에는 황색이나, 황적색으로 변한다. 종자는 납작하며, 3 면에 좁은 날개가 있다 ----- 1. <i>W. subssesilis</i> (병꽃나무)</p>
@@ -3767,7 +3781,7 @@
 <td align="center">		</td>
 <td>
 
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <h1>VIBURNACEAE Raf. (산분꽃나무과)</h1>
 	<h2><i>Viburnum</i> L.	산분꽃나무속 종 검색표</h2>
 
@@ -3825,7 +3839,7 @@
 </td>
 <td align="center">		</td>
 <td>	
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <h1>ADOXACEAE E. Mey. (연복초과)</h1>
     <h2>속 검색표</h2>
     <p class="indent-1">1. 관목, 소교목 또는 다소 목질화된 초본이다. 잎은 우상복엽이며, 소엽은 5 장 또는 그 이상이다. 꽃은 화서당 다수가 성기게 달린다. 꽃에는 밀선이 없으며, 화주는 합생한다 ----- 1. <i>Sambucus</i> (딱종나무속)<br>
@@ -3854,7 +3868,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <h1>CAPRIFOLIACEAE Juss. (인동과)</h1>
     <h2>속 검색표</h2>
 
@@ -3940,7 +3954,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="chenopodium" style="display: block;">
+<div class="df" id="chenopodium" style="display: none;">
     <h1>Chenopodium L. (명아주속)</h1>
     <h2>종 검색표</h2>
 
@@ -4019,7 +4033,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <h1>78. AMARANTHACEAE Juss. 비름과</h1>
 
     <h2>속 검색표</h2>
@@ -4085,7 +4099,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idKey" style="display: block;">
+<div class="df" id="idKey" style="display: none;">
     <h1>81. CARYOPHYLLACEAE Juss. 석죽과</h1>
 
     <h2>속 검색표</h2>
@@ -4188,7 +4202,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idLychnis" style="display: block;">
+<div class="df" id="idLychnis" style="display: none;">
   <h1>13. <em>Lychnis</em> L. 동자꽃속</h1>
 
   <h2>종 검색표</h2>
@@ -4225,7 +4239,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idArenaria" style="display: block;">
+<div class="df" id="idArenaria" style="display: none;">
   <h1><em>Arenaria</em> L. 벼룩이자리속</h1>
 
   <h2>종 검색표</h2>
@@ -4255,7 +4269,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idDianthus" style="display: block;">
+<div class="df" id="idDianthus" style="display: none;">
   <h1><em>Dianthus</em> L. 패랭이꽃속</h1>
 
   <h2>종 검색표</h2>
@@ -4323,7 +4337,7 @@
 </td>
 <td align="center">		</td>
 <td>
-<div class="df" id="idPhytolacca" style="display: block;">
+<div class="df" id="idPhytolacca" style="display: none;">
   <h1><em>Phytolacca</em> L. 자리공속</h1>
 
   <h2>종 검색표</h2>
@@ -5208,6 +5222,78 @@
 </td>
 <td align="center">		</td>
 <td>
+<div class="df" id="idRhododendron" style="display: none;">
+  <h1><em>Rhododendron</em> L. 진달래속</h1>
+
+  <h2>종 검색표</h2>
+
+  <p class="indent-1">1. 잎은 숙존하고, 두꺼운 혁질이며, 무모이거나 털이 밀생 내지 산생한다.</p>
+
+  <p class="indent-2">
+    2. 잎과 자방은 무모이다.</p>
+  <p class="indent-3">
+    3. 잎은 선형, 너비 0.1--1.5 cm 이다. 꽃은 길이 1~2 cm 정도로 비교적 작다. 화판은 이생하며, 백색이다. 수술은 8 ~ 10 개이다. 삭과는 길이 4 mm 정도로 비교적 작다 — <em>R. tomentosum</em> 백산차
+    <br>
+    3. 잎은 도란형, 너비 3~5 cm 이다. 꽃은 길이 2 ~ 3 cm 정도로 비교적 크다. 화판은 유합되며, 황색 또는 약간 붉은색을 띠는 백색이다. 수술은 10 개이다. 삭과는 길이 1--2 cm 로 비교적 크다.</p>
+      <p class="indent-4">
+    4. 아린은 개화 후에도 숙존하고, 여러 해 동안 월동하며, 흑갈색을 띤다. 잎은 설저, 무모이다. 화관은 연한 황색이다. 삭과는 길이 1 cm 정도로 비교적 작다 — 1. <em>R. aureum</em> 노랑만병초
+    <br>
+    4. 아린은 조락하며, 하면에 짙은 갈색 털이 있다. 잎은 원저 또는 약간 심장저이다. 화관은 연한 붉은색을 띠는 백색이다. 열매는 길이 1.5 ~ 2cm 로 비교적 크다 — 2. <em>R. brachycarpum</em> 만병초
+  </p>
+
+  <p class="indent-2">
+    2. 잎과 자방에는 원반 모양의 자루가 없는 선린 (glandular scale) 이 있다.</p>
+    <p class="indent-3">
+    5. 화서는 산방화서이며, 2 ~ 5 개의 꽃이 달린다. 꽃은 방사상칭이며, 지름 2cm, 연홍색이다 — 4. <em>R. lapponicum</em> 황산차
+    <br>
+    5. 화서는 산방상 총상화서이며, 10--30 개의 꽃이 달린다. 꽃은 약간 좌우상칭이며 , 지름 1 cm 이하, 백색이다 — 5. <em>R. micranthum</em> 꼬리진달래
+  </p>
+
+  <p class="indent-1">1. 잎은 조락하고, 대개 막질이며, 드물게 일부 잎은 숙존하고(반상록성) , 흔히 경선모가 있다.</p>
+
+  <p class="indent-2">
+    6. 식물체는 비듬같은 인편으로 덮힌다. 잎, 소지 및 자방에는 원반 모양의 자루가 없는 인편이 있다. 꽃은 단생한다.
+    </p>
+  <p class="indent-3">
+    7. 어린 가지에는 짧은 연모가 있으며, 세모는 없다. 잎은 둔두 내지 아예두, 길이 1 ~ 5 cm 이며, 반상록성이고, 개화시 소수의 잎이 달린다. 꽃은 지름 2 ~ 3cm, 삭과는 길이 0.8--1.2(--1.6) cm 이다 — 6. <em>R. dauricum</em> 산진달래
+    <br>
+    7. 어린 가지에는 거친 강모같은 세모가 있다. 잎은 예두 내지 점첨두, 길이 3--8 cm 이며, 낙엽성이고, 개화시 잎이 달리지 않는다 (꽃이 잎보다 먼저 핀다). 꽃은 지름 (2.5~) 4--8.2 cm, 삭과는 길이 1.2--1.6 cm 이다 — 7. <em>R. mucronulatum</em>
+   </p>
+     <p class="indent-4">
+    7a. 잎은 무모이다 — 7a. var. mucronulatum 진달래
+    <br>
+    7b. 잎 하면에 백색 털이 있다 — 7b. var. ciliatum 털진달래
+  </p>
+
+  <p class="indent-2">
+    6. 식물체는 털이 있거나 없으며, 인편은 없다. 잎, 소지 및 자방은 무모이다 [좀참꽃 (온. redowskianum) 제외 ] . 꽃은 1--8 개씩 모여 달린다.</p>
+      <p class="indent-3">
+    8. 식물체는 반상록성이다. 잎은 너비 0.7--3.5 cm, 좁은 장타원형이다. 소지 및 엽병에는 눌린 분비성 경선모가 밀생한다. 꽃은 대개 잎보다 먼저 핀다.</p>
+      <p class="indent-4">
+    9. 관목으로 키 50 cm 이상이다. 화관은 깔때기형이다.</p>
+      <p class="indent-5">
+    10. 잎은 길이 1.5 ~ 3 cm 이다. 꽃은 백색이며, 화관은 짧은 원통형내지 깔때기 모양의 종형이다. 수술은 4 또는 5 개이다. 화주는 무모이다. 개화기는 6 월말--7 월초이다 — 8. <em>R. tschonoskii</em> 흰참꽃
+    <br>
+    10. 잎은 길이 4 ~ 8 cm 이다. 꽃은 홍자색이며, 화관은 종형이다. 수술은 (7 ~ ) 10 개이다. 화주는 기부 근처에 눌린 털이 있다. 개화기는 4 월말--6 월중순이다 — 9. <em>R. yedoense</em>
+    </p>
+	  <p class="indent-6">
+    10a. 꽃은 겹꽃이다 — 9a. f. yedoense 겹산철쭉
+    <br>
+    <span style="background-color: yellow;">10b. 꽃은 흩꽃이다 — 9b. f. poukhanense 산철쭉</span>
+    </p>
+	 <p class="indent-4">
+    9. 낮게 깔리는 소관목으로 키 10 cm 이하이다. 화관은 종형이다 — 10. <em>R. redowskianum</em> 좀참꽃
+  </p>
+
+  <p class="indent-3">
+    8. 식물체는 낙엽성이다. 잎은 너비 4 ~ 6 cm, 넓은 타원상 난형 또는 난형이다. 어린 가지 및 엽병에는 길고 부드러운 갈색 털이 밀생하나, 점차 무모로 된다. 꽃은 잎보다 먼저 피거나 잎과 함께 또는 잎보다 나중에 핀다.</p>
+   <p class="indent-4">
+    11. 잎은 3 장씩 달리며, 능상 난형 또는 타원상 난형이다. 꽃은 잎보다 먼저 또는 잎과 함께 핀다. 화관은 적색이며, 깔때기형이다. 자방은 장타원형이며, 부드러운 연갈색 털이 밀생한다 — 11. <em>R. weyrichii</em> 참꽃나무
+    <br>
+   <span style="background-color: yellow;">11. 잎은 5 장씩 달리며, 도란형이다. 꽃은 잎과 함께 또는 잎보다 나중에 핀다. 화관은 연홍색, 폭형 또는 종형이다. 자방은 난형, 무모이다 — 12. <em>R. schlippenbachii</em> 철쭉</span>
+  </p>
+</div>
+
 <a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000061405/BIMGVP0000020936.jpg"target="_300">	<img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000061405/thumb500/BIMGVP0000020936.jpg" height="150"></a>
 <a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000061405/BIMGVP0000352810_2019111303242050559.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000061405/thumb500/BIMGVP0000352810_2019111303242050559.jpg" height="150"></a>
 <a href="https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000061405/BIMGVP0000352816_20191113032421056862.jpg"target="_300"> <img src="	https://species.nibr.go.kr/UPLOAD/digital/species/12000006/120000061405/thumb500/BIMGVP0000352816_20191113032421056862.jpg" height="150"></a>
