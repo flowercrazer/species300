@@ -104,6 +104,21 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
 
+function toggleDFVisibility() {
+  var checkBox = document.getElementById("toggleDF");
+  var dfElements = document.querySelectorAll(".df");
+
+  dfElements.forEach(function(dfElement) {
+    if (checkBox.checked) {
+      dfElement.style.display = "block";  // Show the elements
+    } else {
+      dfElement.style.display = "none";  // Hide the elements
+    }
+  });
+}
+
+
+
 		        function selectTextInCell(element) {
             var range = document.createRange();
             var selection = window.getSelection();

@@ -43,7 +43,36 @@
 		.indent-10 {
             margin-left: 18em; /* 네 번째 수준의 들여쓰기 */
         }
-
+		.indent-11 {
+            margin-left: 20em; /* 네 번째 수준의 들여쓰기 */
+        }
+		.indent-12 {
+            margin-left: 22em; /* 네 번째 수준의 들여쓰기 */
+        }
+				.indent-13 {
+            margin-left: 24em; /* 네 번째 수준의 들여쓰기 */
+        }
+				.indent-14 {
+            margin-left: 26em; /* 네 번째 수준의 들여쓰기 */
+        }
+				.indent-15 {
+            margin-left: 28em; /* 네 번째 수준의 들여쓰기 */
+        }
+				.indent-16 {
+            margin-left: 30em; /* 네 번째 수준의 들여쓰기 */
+        }
+				.indent-17 {
+            margin-left: 32em; /* 네 번째 수준의 들여쓰기 */
+        }
+			.indent-18 {
+            margin-left: 34em; /* 네 번째 수준의 들여쓰기 */
+        }
+			.indent-19 {
+            margin-left: 36em; /* 네 번째 수준의 들여쓰기 */
+        }
+			.indent-20 {
+            margin-left: 38em; /* 네 번째 수준의 들여쓰기 */
+        }
 		/* 헤더 컨테이너를 Flexbox로 설정 */
 		.header-container {
 			display: flex; /* Flexbox 사용 */
@@ -268,6 +297,12 @@ button {
 		{
 		 font-style: Bold;
 		 font-size:18px;
+		}
+
+		p.level2
+		{
+		 font-style: Bold;
+		 font-size:14px;
 		}
 
     /* 저작권 안내 문구 스타일 */
