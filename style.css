@@ -92,12 +92,12 @@
 		.title {
 			position: fixed; /* 상단에 고정 */
 			top:0px;
-			left: 50; /* 화면 좌측에 위치 */
+			left: 15px; /* 화면 좌측에 위치 */
 			margin-top: 10px; 
 			margin-left: 10px; 
-			font-size: 10px; /* 타이틀 크기 */
+			font-size: 15px; /* 타이틀 크기 */
 			background-color: white; /* 배경색을 흰색으로 설정 */
-			padding: 10px; /* 타이틀과 화면의 간격 조정 */
+			padding: 0px; /* 타이틀과 화면의 간격 조정 */
 			z-index: 1000; /* 다른 요소 위에 위치 */
 			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 하단 그림자 추가 */
 			width: 100%; /* 화면 전체 너비 */
@@ -117,12 +117,16 @@
 			.blank{
 
 			}
+			.IDKey-control input[type="checkbox"] {
+			margin: 10px 20px; /* 좌우 여백을 추가 */
+			}
+
 		   .IDKey-control {
             position: fixed;
-			margin-top: 20px; 
+			margin-top: 10px; 
 			margin-left: 10px; /* 버튼 간격 조정 */
             top: 0px;
-            right: 700px;
+            right: 550px;
 			justify-content: space-evenly; /*정렬 */
             background-color: white;
             border: 0px solid #ccc;
@@ -132,10 +136,10 @@
         }
         .size-control {
             position: fixed;
-			margin-top: 20px; 
+			margin-top: 10px; 
 			margin-left: 10px; /* 버튼 간격 조정 */
             top: 0px;
-            right: 450px;
+            right: 350px;
             background-color: white;
             border: 0px solid #ccc;
             padding: 0px;
@@ -162,31 +166,31 @@
         }
 
         /* 커스텀 스위치 스타일 */
-        .toggle-label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            width: 60px;
-            height: 30px;
-			text-align:center;
-            background-color: #ccc;
-            border-radius: 15px;
-            position: relative;
-            transition: background-color 0.3s;
-        }
+		.toggle-label {
+			width: 50px;  /* 너비 줄이기 */
+			height: 25px; /* 높이 줄이기 */
+			background-color: #ccc;
+			border-radius: 15px;
+			position: relative;
+			cursor: pointer;
+			display: flex;
+			align-items: center; /* 세로 중앙 정렬 */
+			justify-content: flex-start;
+			transition: background-color 0.3s;
+		}
 
-        .toggle-label:before {
-            content: '';
-            position: absolute;
-            width: 28px;
-            height: 28px;
-			text-align:center;
-            background: white;
-            border-radius: 50%;
-            left: 1px;
-            bottom: 1px;
-            transition: transform 0.3s;
-        }
+
+		.toggle-label:before {
+			content: '';
+			width: 21px;  /* 원의 너비 줄이기 */
+			height: 21px; /* 원의 높이 줄이기 */
+			background: white;
+			border-radius: 50%;
+			position: absolute;
+			left: 2px;
+			bottom: 2px;
+			transition: transform 0.3s;
+		}
 
         /* 체크박스가 체크되었을 때 */
         .toggle-button:checked + .toggle-label {
@@ -194,7 +198,7 @@
         }
 
         .toggle-button:checked + .toggle-label:before {
-            transform: translateX(30px); /* 스위치 이동 */
+            transform: translateX(26px); /* 스위치 이동 */
         }
 
 
@@ -203,8 +207,8 @@
 
 /* 기본 버튼 스타일 (데스크탑 및 큰 화면에서 적용) */
 button {
-    padding: 10px 20px; /* 기본 버튼 크기 */
-    font-size: 14px; /* 기본 폰트 크기 */
+    padding: 5px 5px; /* 기본 버튼 크기 */
+    font-size: 12px; /* 기본 폰트 크기 */
 }
 
 /* 모바일에서 버튼 크기를 더 크게 설정 */
@@ -214,7 +218,7 @@ button {
         font-size: 18px; /* 더 큰 폰트 크기 */
     }
 	.title{
-				font-size: 10px; /* 글자 크기 9px */
+			font-size: 10px; /* 글자 크기 9px */
 			color: gray; /* 색상 선택 (예: 회색) */
 			text-align: center; /* 가운데 정렬 */
 			margin-top: 10px; /* 상단 여백 */
@@ -222,12 +226,24 @@ button {
 }
 
 
+#speedSlider,#imageSizeSlider {
+    width: 100px;  /* 슬라이드의 너비 줄이기 */
+    height: 10px;  /* 슬라이드 트랙의 높이 줄이기 (브라우저에 따라 다르게 작동할 수 있음) */
+}
+
+#speedSlider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* 기본 thumb 제거 */
+    width: 15px; /* thumb의 너비 */
+    height: 15px; /* thumb의 높이 */
+    background: #4caf50; /* thumb 색상 */
+    cursor: pointer;
+}
 
 
 
 
-		     table {
-			 margin-top: 70px; /* 타이틀 높이 + 여유 공간 */
+		 table {
+			 margin-top: 50px; /* 타이틀 높이 + 여유 공간 */
 			 width: 100%;
             border-collapse: collapse; /* 테이블 셀 사이에 간격을 없앰 */
             margin: 0px 0;
@@ -317,52 +333,52 @@ button {
             opacity: 1; /* 마우스 오버 시 툴팁 보이기 */
         }
 		
-.menu-button {
-    position: fixed;
-    top: 0px;
-    left: 0;
-	width: 20px;
-    height: 70px;
-	background-color: #333;
-    color: white;
-    padding: 1px;
-    cursor: pointer;
-    z-index: 100000;
-}
+		.menu-button {
+			position: fixed;
+			top: 0px;
+			left: 0;
+			width: 20px;
+			height: 50px;
+			background-color: #333;
+			color: white;
+			padding: 1px;
+			cursor: pointer;
+			z-index: 100000;
+		}
 
-.menu {
-    position: fixed;
-    top: 70px;
-    left: -200px;
-    width: 200px;
-    height: 100%;
-	padding: 4px;
-    background-color: #f1f1f1;
-    border-right: 1px solid #ccc;
-    transition: left 0.3s ease;
-	overflow-y: auto;
-    z-index: 999;
-  
-}
+		.menu {
+			position: fixed;
+			top: 50px;
+			left: -200px;
+			width: 200px;
+			height: 100%;
+			padding: 4px;
+			background-color: #f1f1f1;
+			border-right: 1px solid #ccc;
+			transition: left 0.3s ease;
+			overflow-y: auto;
+			z-index: 999;
+		  
+		}
 
-.menu.open {
-    left: 0;
-}
+		.menu.open {
+			left: 0;
+		}
 
-.menu ul {
-    list-style-type: none;
-    padding-left: 0;
-}
+		.menu ul {
+			list-style-type: none;
+			padding-left: 0;
+		}
 
-.menu ul li {
-    margin-left:20px;
-}
+		.menu ul li {
+			margin-left:20px;
+		}
 
-.menu ul li a {
-    text-decoration: none;
-    color: black;
-    display: block;
-}
+		.menu ul li a {
+			text-decoration: none;
+			color: black;
+			display: block;
+		}
 		p.level1
 		{
 		 font-style: Bold;
